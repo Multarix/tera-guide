@@ -8,8 +8,8 @@
         "settingsMigrator": "settings_migrator.js",
         "settingsVersion": "1.07"
     },
-    "author": "HSDN / ZC / ITunk / michengs / Kasea / Multairx",
-    "description": "A generic guide module for TERA. Display hints on screen and drawing zones of bosses attacks and mechanics.",
+    "author": "HSDN (forked by Multarix)",
+    "description": "Display attack notifications and attack zones of boss monsters",
     "servers": ["https://raw.githubusercontent.com/multarix/tera-guide/master/"],
     "supportUrl": "https://github.com/multarix/tera-guide/issues",
     "dependencies": {
