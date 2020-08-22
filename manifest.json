@@ -1,12 +1,16 @@
 {
   "files": {
-    "LICENSE": "e67e8b4a10ada65c0b1e7ff436b74c7d3dbe97bc68969b74714b3549d00dfa08",
     "README.md": "40f0d8b681639427cdb4cf3688c0a8919d6e584bd61bbfeaf77f808ba4470877",
-    "dbg.json": {
+    "dbg.json":{
       "hash": "9d353592adc095eb4d88605354bbf952ad80a4d88dca023eca823e2a329c8831",
       "overwrite": false
     },
     "dispatch.js": "521dce3d7a3f4aa1a985998a635cfeb6114155d762dc211bb8d27162de1aea90",
+    "index.js": "d406237a8b7e8504de7f24956f89267c8b743841fba9dc345a36b11cfb74b025",
+    "lib.js": "bb6dc6e108714d834c9f418efcbb6f4531ae291634063552d723c9acb996c1c5",
+    "LICENSE": "e67e8b4a10ada65c0b1e7ff436b74c7d3dbe97bc68969b74714b3549d00dfa08",
+    "module.json": "840be528d0e7870135bba76a06732c801f636af04af32361c5887be6deb979d4",
+    "settings_migrator.js": "ee71724b77c4bd2cf0dbb06e646b8c364e579c8c690cdc4221b1dc2bdcc197ab",
     "guides/3020.js": "00cc922db6c81cbfaf78189e621c7e92be1a0ab02cd942ba1e9b86c514900ed9",
     "guides/3023.js": "c4599008140533998772d8f2bcbbe5635f0460cc8bd1aef65653078ff1d8c2ec",
     "guides/3026.js": "69bc6c612b2eb6603989932f56b5a20ae2f16fa4a7c7816cb72c2b2b88ea613e",
@@ -28,10 +32,6 @@
     "guides/9970.js": "d50cd461da0bf86bcb22dd299395f9f17d84f3ca3c6a8493286c8f610def3270",
     "guides/9981.js": "de21e3ab09501b414bc0a3b0341c8bac75de412e01c080ad0a2eba8b264978bb",
     "guides/9982.js": "fa6503e318f7e4131122c80d2949c3d42f4bb80784ec71e4a772e933c8a4c84c",
-    "index.js": "d406237a8b7e8504de7f24956f89267c8b743841fba9dc345a36b11cfb74b025",
-    "lib.js": "bb6dc6e108714d834c9f418efcbb6f4531ae291634063552d723c9acb996c1c5",
-    "module.json": "840be528d0e7870135bba76a06732c801f636af04af32361c5887be6deb979d4",
-    "settings_migrator.js": "ee71724b77c4bd2cf0dbb06e646b8c364e579c8c690cdc4221b1dc2bdcc197ab",
     "voice/index.js": "5808ae365eb6455fc806c1e345d2f702568f2f5506b857c23fa0358cf1ce8e93"
   },
   "defs": {
