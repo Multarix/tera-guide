@@ -2,3 +2,6 @@ manifest-generator.bat
 manifest-generator.js
 guides/test.js
 config.json
+generated-manifest.json
+newtonsoft.json.dll
+SHAGen.exe
