@@ -24,7 +24,7 @@ function argogReveal(handlers) {
 			"message": "Dodge!",
 			"message_RU": "Уклоняйся!"
 		});
-	}, 3500);
+	}, 3400);
 }
 
 module.exports = {
@@ -84,9 +84,9 @@ module.exports = {
 "s-739-3000-2107-0": [{"type": "text","sub_type": "message","message": "Many Hits","message_RU": "Кнут"}],
 
 "s-739-3000-1115-0": [{"type": "func","func": argogStun},
-{"type": "func","func": SpawnCircle.bind(null,false,553,0,0,10,600,0,4000)}],
+{"type": "func","func": SpawnCircle.bind(null,false,553,0,0,10,630,0,4000)}],
 "s-739-3000-2115-0": [{"type": "func","func": argogStun},
-{"type": "func","func": SpawnCircle.bind(null,false,553,0,0,10,600,0,4000)}],
+{"type": "func","func": SpawnCircle.bind(null,false,553,0,0,10,630,0,4000)}],
 
 "s-739-3000-1118-0": [{"type": "text","sub_type": "message","message": "Spin","message_RU": "Кнут"}],
 "s-739-3000-2118-0": [{"type": "text","sub_type": "message","message": "Spin","message_RU": "Кнут"}],
@@ -96,9 +96,9 @@ module.exports = {
 "s-739-3000-2167-0": [{"type": "text","sub_type": "message","message": "Many Hits","message_RU": "Кнут"}],
 
 "s-739-3000-1175-0": [{"type": "func","func":  argogStun},
-{"type": "func","func": SpawnCircle.bind(null,false,553,0,0,10,600,0,4000)}],
+{"type": "func","func": SpawnCircle.bind(null,false,553,0,0,10,630,0,4000)}],
 "s-739-3000-2175-0": [{"type": "func","func": argogStun},
-{"type": "func","func": SpawnCircle.bind(null,false,553,0,0,10,600,0,4000)}],
+{"type": "func","func": SpawnCircle.bind(null,false,553,0,0,10,630,0,4000)}],
 
 "s-739-3000-1178-0": [{"type": "text","sub_type": "message","message": "Spin","message_RU": "Кнут"}],
 "s-739-3000-2178-0": [{"type": "text","sub_type": "message","message": "Spin","message_RU": "Кнут"}]
