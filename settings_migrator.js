@@ -24,6 +24,7 @@ const DefaultSettings = {
 		{"id": 9067, "name": "Demokron Factory (Hard)", "name_RU": "Лаборатория Берна (сложно)", "verbose": true, "spawnObject": true},
 		{"id": 9720, "name": "Antaroth's Abyss", "name_RU": "Омут Антароса", "verbose": true, "spawnObject": true},
 		{"id": 9735, "name": "RK-9 Kennel", "name_RU": "Ангар RK-9", "verbose": true, "spawnObject": true},
+		{"id": 9739, "name": "Red Refuge", "name_RU": "Красный Убежище", "verbose": true, "spawnObject": true},
 		{"id": 9781, "name": "Velik's Sanctuary", "name_RU": "Святилище Велики", "verbose": true, "spawnObject": true},
 		{"id": 9782, "name": "Grotto of Lost Souls", "name_RU": "Мастерская Леандра", "verbose": true, "spawnObject": true},
 		{"id": 9920, "name": "Antaroth's Abyss (Hard)", "name_RU": "Омут Бездушного Антароса", "verbose": true, "spawnObject": true},
@@ -50,8 +51,8 @@ module.exports = function MigrateSettings(from_ver, to_ver, settings) {
 			// Recursively upgrade in one-version steps
 			settings = MigrateSettings(from_ver, from_ver + 1, settings);
 
-			setTimeout(function(){ 
-					return MigrateSettings(from_ver + 1, to_ver, settings); 
+			setTimeout(function(){
+					return MigrateSettings(from_ver + 1, to_ver, settings);
 			}, 0);
 		}
 		// If we reach this point it's guaranteed that from_ver === to_ver - 1, so we can implement

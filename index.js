@@ -218,7 +218,7 @@ class TeraGuide{
 			}
 		}
 		dispatch.hook('S_ACTION_STAGE', 9, {order: 15}, s_action_stage);
-		
+
 		/** ABNORMALITY **/
 
 		// Boss abnormality triggered
@@ -326,14 +326,14 @@ class TeraGuide{
 					throw 'Guide for zone ' + zone + ' not found in config';
 				}
 				active_guide = require('./guides/' + zone);
-				if ([3126, 3026, 9750, 9066, 9050, 9054, 9754, 9916, 9781, 3017, 9044, 9070, 9920, 9970, 9981].includes(zone)) {
-					spguide = true;   // skill  1000-3000 
+				if ([3126, 3026, 9750, 9066, 9050, 9054, 9754, 9916, 9781, 3017, 9044, 9070, 9739, 9920, 9970, 9981].includes(zone)) {
+					spguide = true;   // skill  1000-3000
 					esguide = false;
 				} else if ([9000, 3023, 9759].includes(zone)) {
-					spguide = false; // skill  100-200-3000 
+					spguide = false; // skill  100-200-3000
 					esguide = true;
 				} else {
-					spguide = false; // skill  100-200 
+					spguide = false; // skill  100-200
 					esguide = false;
 				}
 				guide_found = true;
@@ -342,7 +342,7 @@ class TeraGuide{
 						text_handler({
 							"sub_type": "PRMSG",
 							"delay": 8000,
-							"message_RU": 'Вы вошли в ' + cr + entered_zone_data.name_RU + cw + ' [' + zone + ']', 
+							"message_RU": 'Вы вошли в ' + cr + entered_zone_data.name_RU + cw + ' [' + zone + ']',
 							"message": 'Enter SP Dungeon: ' +  cr + entered_zone_data.name + cw + ' [' + zone + ']'
 						});
 					} else if (esguide) {
@@ -363,13 +363,13 @@ class TeraGuide{
 					text_handler({
 						"sub_type": "CGMSG",
 						"delay": 8000,
-						"message_RU": 
-							`Введите "guide help" для вывода справки\n` + 
-							`Состояние режима стрима: ${dispatch.settings.stream?"Вкл":"Выкл"}.\n` + 
+						"message_RU":
+							`Введите "guide help" для вывода справки\n` +
+							`Состояние режима стрима: ${dispatch.settings.stream?"Вкл":"Выкл"}.\n` +
 							`Состояние голосовых сообщений: ${dispatch.settings.speaks?"Вкл":"Выкл"}.`,
-						"message": 
-							`'Enter "guide help" for more information\n` + 
-							`The current stream mode ${dispatch.settings.stream?"on":"off"}.\n` + 
+						"message":
+							`'Enter "guide help" for more information\n` +
+							`The current stream mode ${dispatch.settings.stream?"on":"off"}.\n` +
 							`The current guide voice ${dispatch.settings.speaks?"on":"off"}.`
 					});
 				}
@@ -462,7 +462,7 @@ class TeraGuide{
 					if (sd_id) {
 						dispatch.settings.dungeons[sd_id].spawnObject = !dispatch.settings.dungeons[sd_id].spawnObject;
 						text_handler({"sub_type": "PRMSG",
-							"message_RU": `Спавн объектов для данжа ${dispatch.settings.dungeons[sd_id].name_RU} [${dispatch.settings.dungeons[sd_id].id}]: ${dispatch.settings.dungeons[sd_id].spawnObject?"Вкл":"Выкл"}.`, 
+							"message_RU": `Спавн объектов для данжа ${dispatch.settings.dungeons[sd_id].name_RU} [${dispatch.settings.dungeons[sd_id].id}]: ${dispatch.settings.dungeons[sd_id].spawnObject?"Вкл":"Выкл"}.`,
 							"message": `Spawning objects for dungeon ${dispatch.settings.dungeons[sd_id].name_RU} [${dispatch.settings.dungeons[sd_id].id}] has been ${dispatch.settings.dungeons[sd_id].spawnObject?"on":"off"}.`
 						});
 					} else {
@@ -510,7 +510,7 @@ class TeraGuide{
 			3() {
 				text_handler({"sub_type": "PRMSG","message_RU": `Скорость речи 3`, "message": `Voice speed 3` });
 				dispatch.settings.rate.splice(0,1, rate3);
-			},	
+			},
 			4() {
 				text_handler({"sub_type": "PRMSG","message_RU": `Скорость речи 4`, "message": `Voice speed 4` });
 				dispatch.settings.rate.splice(0,1, rate4);
@@ -530,7 +530,7 @@ class TeraGuide{
 			8() {
 				text_handler({"sub_type": "PRMSG","message_RU": `Скорость речи 8`, "message": `Voice speed 8` });
 				dispatch.settings.rate.splice(0,1, rate8);
-			},	
+			},
 			9() {
 				text_handler({"sub_type": "PRMSG","message_RU": `Скорость речи 9`, "message": `Voice speed 9` });
 				dispatch.settings.rate.splice(0,1, rate9);
@@ -589,7 +589,7 @@ class TeraGuide{
 			cgr() {
 				text_handler({"sub_type": "CGRMSG","message_RU": `Цвет системного сообщения: серый`, "message": `system message notification color is  GRAY`});
 				dispatch.settings.cc.splice(0,1, cgr);
-			},	
+			},
 			cw() {
 				text_handler({"sub_type": "CWMSG","message_RU": `Цвет системного сообщения: белый`, "message": `system message notification color is  WHITE`});
 				dispatch.settings.cc.splice(0,1, cw);
@@ -733,7 +733,7 @@ class TeraGuide{
 		function despawn_handler(event) {
 			// Make sure id is defined
 			if (!event['id']) return debug_message(true, "Spawn handler needs a id");
-			// 
+			//
 			if (!dispatch.settings.spawnObject) return;
 			// Ignore if dispatch.settings.streamer mode is enabled
 			if (dispatch.settings.stream) return;

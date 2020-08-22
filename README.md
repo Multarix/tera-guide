@@ -1,3 +1,5 @@
+Forked from https://github.com/hsdn/tera-guide/
+
 # tera-guide
 A generic guide module for TERA with English and Russian translations (detects automaticly). Display hints on screen and drawing zones of bosses attacks and mechanics (also supports of Text-to-speech notifications).
 
@@ -29,6 +31,7 @@ Toolbox(/8) | Command description | Описание команды
 id | Dungeon name | Название данжа
 --- | --- | ---
 9781 | Velik's Sanctuary | Святилище Велики
+9739 | Red Refuge | Красный Убежище
 9735 | RK-9 Kennel | Ангар RK-9
 3034 | RK-9 Kennel (Hard) | Ангар RK-9 (сложно)
 9920 | Antaroth's Abyss (Hard) | Омут Бездушного Антароса
