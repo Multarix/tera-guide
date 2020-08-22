@@ -81,7 +81,7 @@ module.exports = {
 	},
 
 	// 1 BOSS
-	
+
 	"s-781-1000-2401": [
 		{"type": "text","sub_type": "message","message": "Right","message_RU": "Откид вправо"},
 		{"type": "func","func": SpawnMarker.bind(null,false,300,100,0,2000,true,null)},
@@ -169,12 +169,12 @@ module.exports = {
 	//"s-781-2000-2134-0": [{"type": "func","func": single_stage_callout.bind(null, "吃注视")}], // удар черенком
 	//"s-781-2000-2502-0": [{"type": "func","func": single_stage_callout.bind(null, "鉴定准备")}], // ?
 	//"s-781-2000-4000-0": [{"type": "text","sub_type": "alert","message": "鉴定！！！！","message_RU": "Дискотека！"}],
-	
+
 	//"dm-0-0-9781022": [{"type": "text","sub_type": "alert","message": "鉴定","message_RU": "鉴定"}],
 	//"dm-0-0-9781023": [{"type": "text","sub_type": "message","message": "全场鉴定","message_RU": "全场鉴定"}],
 	"dm-0-0-9781046": [{"type": "text","sub_type": "message","message": "First: (Debuffs) Closest","message_RU": "[ДКБ] Первая: дебафф (ближние)"}], // Thank you... for this release...
 	"dm-0-0-9781047": [{"type": "text","sub_type": "message","message": "First: (Circles) Spread","message_RU": "[КБД] Первая: круги (отдельно)"}], // Beware the... red lightning...
-	"dm-0-0-9781048": [{"type": "text","sub_type": "message","message": "First: (Bombs) Gather + cleanse","message_RU": "[БДК] Первая: бомбы (вместе + клинс)"}], // Beware the mark... of Lakan...  
+	"dm-0-0-9781048": [{"type": "text","sub_type": "message","message": "First: (Bombs) Gather + cleanse","message_RU": "[БДК] Первая: бомбы (вместе + клинс)"}], // Beware the mark... of Lakan...
 
 
 	// 3 BOSS

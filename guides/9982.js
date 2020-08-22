@@ -22,7 +22,7 @@ let steptwo = false;
 		shield.w = entity['loc'].w;
 		let X = Math.pow((-95703 - shield.x), 2),
 			Y = Math.pow((144980 - shield.y), 2),
-			C = Math.pow(X+Y, 0.5);  
+			C = Math.pow(X+Y, 0.5);
 
 	if (C < 500) return;
 	let angle = degrees * Math.PI/180;
@@ -36,14 +36,14 @@ let steptwo = false;
 	}
 }
 
-function SpawnMarker2( degrees, radius, times, handlers, event, entity ) {	
+function SpawnMarker2( degrees, radius, times, handlers, event, entity ) {
 	let shield_loc = entity['loc'].clone();
 	let shield = entity['loc'].clone();
 		shield_loc.w  = entity['loc'].w;
 		shield.w = entity['loc'].w;
 		let X = Math.pow((-95703 - shield.x), 2),
 			Y = Math.pow((144980 - shield.y), 2),
-			C = Math.pow(X+Y, 0.5);  
+			C = Math.pow(X+Y, 0.5);
 	if (C < 500) {
 		if (radius > 105) { return; } else { radius = 105 }
 	}
@@ -97,7 +97,7 @@ function skilld_event(skillid, handlers, event, ent, dispatch) {
 				"sub_type": "message",
 				"message_RU": "Полностью заряжен!!!",
 				"message": "Fully charged!!"
-			});	
+			});
 			handlers['text']({
 				"sub_type": "notification",
 				"message_RU": "Полностью заряжен!!!",
@@ -201,12 +201,12 @@ module.exports = {
 						 {"type": "func","func": SpawnCircle.bind(null,false,445,215,370,10,480,2500,8000)},
 						 {"type": "func","func": SpawnCircle.bind(null,false,445,215,370,8,640,2500,8000)},
 						 {"type": "func","func": SpawnCircle.bind(null,false,445,215,370,6,800,2500,8000)},
-					 	{"type": "func","func": skilld_event.bind(null, 154)}  
+					 	{"type": "func","func": skilld_event.bind(null, 154)}
 	],
 	"s-982-3000-144-0": [{"type": "text","sub_type": "message","message": "Right rear","message_RU": "Справа сзади"},{"type": "func","func": skilld_event.bind(null, 144)}],
 	"s-982-3000-147-0": [{"type": "text","sub_type": "message","message": "Right rear","message_RU": "Справа сзади"},{"type": "func","func": skilld_event.bind(null, 147)}],
 	"s-982-3000-148-0": [{"type": "text","sub_type": "message","message": "Right rear (pulses)","message_RU": "Справа сзади (бублик)"},
-						 {"type": "func","func": SpawnMarker.bind(null,false,155,388,0,8000,true,null)}, 
+						 {"type": "func","func": SpawnMarker.bind(null,false,155,388,0,8000,true,null)},
 						 {"type": "func","func": SpawnCircle.bind(null,false,445,155,388,15,160,2500,8000)},
 						 {"type": "func","func": SpawnCircle.bind(null,false,445,155,388,12,320,2500,8000)},
 						 {"type": "func","func": SpawnCircle.bind(null,false,445,155,388,10,480,2500,8000)},
@@ -215,7 +215,7 @@ module.exports = {
 						 {"type": "func","func": skilld_event.bind(null, 148)}
 	],
 	"s-982-3000-155-0": [{"type": "text","sub_type": "message","message": "Right rear (pulses)","message_RU": "Справа сзади (бублик)"},
-						 {"type": "func","func": SpawnMarker.bind(null,false,155,388,0,8000,true,null)}, 
+						 {"type": "func","func": SpawnMarker.bind(null,false,155,388,0,8000,true,null)},
 						 {"type": "func","func": SpawnCircle.bind(null,false,445,155,388,15,160,2500,8000)},
 						 {"type": "func","func": SpawnCircle.bind(null,false,445,155,388,12,320,2500,8000)},
 						 {"type": "func","func": SpawnCircle.bind(null,false,445,155,388,10,480,2500,8000)},

@@ -49,7 +49,7 @@ function skilld_event(skillid, handlers, event, entity, dispatch) {
 		// < 30%
 		// Проваливай! - Упади в бездну
 		// к нему (бублик вокруг босса) -> от него (круг перед боссом) -> [волны] -> к нему (бублик перед боссом)
-		} else if (purple && boss_thirty) { 
+		} else if (purple && boss_thirty) {
 			handlers['text']({"type": "text","sub_type": "message","message": "IN > OUT","message_RU": "К нему > От него > (К нему)"});
 			handlers['text']({"type": "text","sub_type": "message","delay": 5000,"message": "IN","message_RU": "К нему"});
 
@@ -77,7 +77,7 @@ function skilld_event(skillid, handlers, event, entity, dispatch) {
 		// к нему (бублик вокруг босса) -> от него (круг перед боссом) -> от него (большой круг перед боссом)
 		} else if (purple && !boss_thirty) {
 			handlers['text']({"type": "text","sub_type": "message","message": "IN > OUT > OUT","message_RU": "К нему > От него > От него"});
-			
+
 			// большой круг перед боссом
 			SpawnCircle(true, 912,0,200,8,450,5000,3000,handlers,event,entity); // 3
 
@@ -240,13 +240,13 @@ module.exports = {
 	//"s-3020-9101-124-0": [{"type": "text","sub_type": "message","message": "Jump","message_TW": "前砸"}],
 	//"s-3020-9101-125-0": [{"type": "text","sub_type": "message","message": "Jump","message_TW": "转圈"}],
 	//"s-3020-9101-126-0": [{"type": "text","sub_type": "message","message": "Jump","message_TW": "大前砸"}],
-	//"s-3020-2201-121-0": [{"type": "text","sub_type": "message","message": 'Left swipe',"message_TW": "2201-121"},{"type": "func","func": SpawnMarker.bind(null,false,0,0,100,2000,true,null)}], 
-	//"s-3020-2201-125-0": [{"type": "text","sub_type": "message","message": 'Left swipe',"message_TW": "2201-125"},{"type": "func","func": SpawnMarker.bind(null,false,0,0,100,2000,true,null)}], 
-	//"s-3020-2201-126-0": [{"type": "text","sub_type": "message","message": 'Left swipe',"message_TW": "2201-126"},{"type": "func","func": SpawnMarker.bind(null,false,0,0,100,2000,true,null)}], 
+	//"s-3020-2201-121-0": [{"type": "text","sub_type": "message","message": 'Left swipe',"message_TW": "2201-121"},{"type": "func","func": SpawnMarker.bind(null,false,0,0,100,2000,true,null)}],
+	//"s-3020-2201-125-0": [{"type": "text","sub_type": "message","message": 'Left swipe',"message_TW": "2201-125"},{"type": "func","func": SpawnMarker.bind(null,false,0,0,100,2000,true,null)}],
+	//"s-3020-2201-126-0": [{"type": "text","sub_type": "message","message": 'Left swipe',"message_TW": "2201-126"},{"type": "func","func": SpawnMarker.bind(null,false,0,0,100,2000,true,null)}],
 	//"s-3020-2201-201-0": [{"type": "func","func": SpawnMarker.bind(null,false,0,0,100,2000,true,null)}],
-	//"s-3020-6103-203-0": [{"type": "text","sub_type": "message","message": 'Left swipe',"message_TW": "6103-203"},{"type": "func","func": SpawnMarker.bind(null,false,0,0,100,2000,true,null)}], 
-	//"s-3020-6103-202-0": [{"type": "text","sub_type": "message","message": 'Left swipe',"message_TW": "6103-202"},{"type": "func","func": SpawnMarker.bind(null,false,0,0,100,2000,true,null)}], 
-	//"s-3020-6103-201-0": [{"type": "text","sub_type": "message","message": 'Left swipe',"message_TW": "6103-201"},{"type": "func","func": SpawnMarker.bind(null,false,0,0,100,2000,true,null)}],  
+	//"s-3020-6103-203-0": [{"type": "text","sub_type": "message","message": 'Left swipe',"message_TW": "6103-203"},{"type": "func","func": SpawnMarker.bind(null,false,0,0,100,2000,true,null)}],
+	//"s-3020-6103-202-0": [{"type": "text","sub_type": "message","message": 'Left swipe',"message_TW": "6103-202"},{"type": "func","func": SpawnMarker.bind(null,false,0,0,100,2000,true,null)}],
+	//"s-3020-6103-201-0": [{"type": "text","sub_type": "message","message": 'Left swipe',"message_TW": "6103-201"},{"type": "func","func": SpawnMarker.bind(null,false,0,0,100,2000,true,null)}],
 	"s-3020-2200-127-0": [{"type": "func","func": skilld_event.bind(null, 127)}],
 	"s-3020-2200-128-0": [{"type": "text","sub_type": "message","message": "Upper cut (Knock up)","message_RU": "Черкаш (подлет)"}],
 	"s-3020-2200-129-0": [{"type": "text","sub_type": "message","message": "Hammer Toss ~ Skull","message_RU": "Полоса в цель"},

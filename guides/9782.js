@@ -29,7 +29,7 @@ module.exports = {
 	"s-782-1000-310-0": [{"type": "text","sub_type": "message","message": "2 flower","message_RU": "2 цветка!"}],
 	"s-782-1000-116-0": [{"type": "text","sub_type": "message","message": "Big AoE attack!!","message_RU": "AOE!!"}],
 	"s-782-1000-312-0": [{"type": "text","sub_type": "message","message": "Golden flower!!","message_RU": "Золотой цветок!!"}],
-	
+
 	// 2 BOSS
 	"s-782-2000-105-0": [{"type": "text","sub_type": "message","message": "Spin","message_RU": "Кувырок"}],
 	"s-782-2000-113-0": [{"type": "text","sub_type": "message","message": "Stun inc","message_RU": "Стан"}],
@@ -64,7 +64,7 @@ module.exports = {
 	"s-782-3000-144-0": [{"type": "text","sub_type": "message","message": "Right rear","message_RU": "Справа сзади"}],
 	"s-782-3000-147-0": [{"type": "text","sub_type": "message","message": "Right rear","message_RU": "Справа сзади"}],
 	"s-782-3000-148-0": [{"type": "text","sub_type": "message","message": "Right rear (pulses)","message_RU": "Справа сзади (бублик)"},
-						 {"type": "func","func": SpawnMarker.bind(null,false,155,388,0,8000,true,null)}, 
+						 {"type": "func","func": SpawnMarker.bind(null,false,155,388,0,8000,true,null)},
 						 {"type": "func","func": SpawnCircle.bind(null,false,445,155,388,15,160,2500,8000)},
 						 {"type": "func","func": SpawnCircle.bind(null,false,445,155,388,12,320,2500,8000)},
 						 {"type": "func","func": SpawnCircle.bind(null,false,445,155,388,10,480,2500,8000)},
@@ -97,7 +97,7 @@ module.exports = {
 						 {"type": "func","func": SpawnVector.bind(null,912,90,0,0,500,0,5000)},
 						 {"type": "func","func": SpawnVector.bind(null,912,270,0,180,500,0,5000)},
 						 {"type": "func","func": SpawnMarker.bind(null,false,90,200,0,8000,true,null)}
-	], 
+	],
 	"s-782-3000-152-0": [{"type": "text","sub_type": "message","message": "Right safe","message_RU": "ПРАВО сейф"},
 						 {"type": "func","func": SpawnVector.bind(null,912,90,0,0,500,0,5000)},
 						 {"type": "func","func": SpawnVector.bind(null,912,270,0,180,500,0,5000)},

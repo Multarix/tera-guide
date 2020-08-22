@@ -36,7 +36,7 @@ function skilld_event(skillid, handlers, event, ent, dispatch) {
 				"sub_type": "message",
 				"message_RU": "Скоро дебафф!",
 				"message": "Debuff coming soon！"
-			});	
+			});
 		}, 55000);
 	}
 	if (notice && skillid === 234 && boss === 0) { //203 204技能没出/满足234 打手位置本体技能/满足吃本体buff
@@ -230,7 +230,7 @@ module.exports = {
 	"s-3201-1000-118-0": [{"type": "text","sub_type": "message","message": "Jump P (Slow)","message_RU": "Прыжок" },
 						  {"type": "text","sub_type": "message","delay": 1500,"message": "pull","message_RU": "Камень!"},
 	],
-	//{"type": "text","sub_type": "notification","delay": 1500,"message": "pull","message_RU": "Камень!"}	
+	//{"type": "text","sub_type": "notification","delay": 1500,"message": "pull","message_RU": "Камень!"}
 	"s-3201-1000-119-0": [{"type": "text","sub_type": "message","delay": 1000,"message": "Back + Front","message_RU": "Вперед + Назад" }],
 	//"s-3201-1000-121-0": [{"type": "text","class_position":"tank","sub_type": "message","message": "Right","message_RU": "Право" }],
 	//"s-3201-1000-122-0": [{"type": "text","class_position":"tank","sub_type": "message","message": "Left","message_RU": "Лево" }],
@@ -279,7 +279,7 @@ module.exports = {
 	// 2 BOSS
 
 	"h-3201-2000-99": [{"type": "func","func": start_boss}],
-	
+
 	//"s-3201-2000-101-0": [{"type": "text","class_position":"tank","sub_type": "message","message": "right left","message_RU": "右手 左手"}],
 	//"s-3201-2000-102-0": [{"type": "text","class_position":"tank","sub_type": "message","message": "left right","message_RU": "左手 右手"}],
 	//"s-3201-2000-103-0": [{"type": "text","class_position":"tank","sub_type": "message","message": "spin","message_RU": "旋转顺"}],
@@ -296,15 +296,15 @@ module.exports = {
 	//"s-3201-2000-202-0": [{"type": "text","sub_type": "message","message": "front 8m","message_RU": "Движение вперед 8м"}],
 	"s-3201-2000-203-0": [{"type": "func","func": skilld_event.bind(null, 203)}],
 	"s-3201-2000-204-0": [{"type": "func","func": skilld_event.bind(null, 204)}],
-	
+
 	"am-3201-320126-32010224": [{"type": "text","sub_type": "notification","message": "Next true","message_RU": "След. правда"},{"type": "func","func": skilld_event.bind(null, 32010224)}],
 	"am-3201-2000-32010220": [{"type": "text","sub_type": "notification","message": "Next false","message_RU": "След. ложь"},{"type": "func","func": skilld_event.bind(null, 32010220)}],
 	"ae-0-0-9203100": [{"type": "func","func": skilld_event.bind(null, 9203100)}],
-	
+
 	//"s-3201-2000-211-0": [{"type": "text","sub_type": "message","message": "front","message_RU": "???"}],
 	//"s-3201-2000-213-0": [{"type": "text","sub_type": "message","message": "back","message_RU": "????"}],
 	// "s-3201-2000-226-0": [{"type": "text","sub_type": "message","message_RU": "空中吸收 蓄力"}],
-	"s-3201-2000-228-0": [ 
+	"s-3201-2000-228-0": [
 		{"type": "text","sub_type": "message","message": "Team up","message_RU": "Камни (вместе)!!!"},
 		{"type": "text","sub_type": "message","delay": 3500,"message": "Dodge","message_RU": "Эвейд"}
 	//	{"type": "text","sub_type": "notification","delay": 3500,"message": "Dodge","message_RU": "Эвейд"}
@@ -326,7 +326,7 @@ module.exports = {
 	"h-3201-2000-81": [{"type": "func","func": print_eighty}],
 	"h-3201-2000-78": [{"type": "func","func": start_boss1}],
 	"h-3201-2000-76": [{"type": "func","func": print_seventyfive}],
-	
+
 	"s-3201-2000-234-0": [{"type": "func","func": skilld_event.bind(null, 234)}],
 	//"s-3201-2000-235-0": [{"type": "text","sub_type": "message","message": "Debuffs","message_RU": "注视2人吃鉴定" }]
 	"s-3201-2000-236-0": [{"type": "text","sub_type": "message","message": "counter","message_RU": "Конус вперед (байт)"}],
@@ -338,7 +338,7 @@ module.exports = {
 	//320124-------------302 301
    /*"s-3201-320120-204": [{"type": "func","func": SpawnMarker.bind(null,false,0, 0, 10, 1100,false,["Бомба замедленного действия","Бомба замедленного действия"])},   //炸弹慢
 					  {"type": "func","func": SpawnCircle.bind(null,false,445,0,0,15,150,0,1100)}],
-   
+
    "s-3201-320120-205": [{"type": "func","func": SpawnMarker.bind(null,false,0, 0, 10, 1100,false,["Бомба","Бомба"])},   //炸弹
 					  {"type": "func","func": SpawnCircle.bind(null,false,445,0,0,15,150,0,1100)}]*/
 };
