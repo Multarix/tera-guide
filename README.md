@@ -8,9 +8,16 @@ A generic guide module for TERA with English and Russian translations (detects a
 ## Dependencies / Зависимости
 https://github.com/tera-toolbox-mods/library
 
-Extract to "mods" directory in your Tera-Proxy. DO NOT INSTALLED IT AS "library-master" MAKE SURE IT'S NAMED "library".
+Extract to "mods" directory in your Tera-Toolbox. DO NOT INSTALL IT AS "library-master" MAKE SURE IT'S NAMED "library".
 
-Распаковать в директорию "mods" в вашей Tera-Proxy. НЕ РАСПАКОВЫВАТЬ КАК "library-master", ДИРЕКТОРИЯ ДОЛЖНА НАЗЫВАТЬСЯ "library".
+Распаковать в директорию "mods" в вашей Tera-Toolbox. НЕ РАСПАКОВЫВАТЬ КАК "library-master", ДИРЕКТОРИЯ ДОЛЖНА НАЗЫВАТЬСЯ "library".
+
+For some rgb memes on certain supported dungeons:
+https://github.com/SharkFinPro/razer-chroma-nodejs
+
+Extract to node_modules folder inside of Tera-Toolbox. Make sure the folder is named "razer-chroma-nodejs"
+Current supported dungeons are: Akalath Quarantine
+
 
 ## Commands / Команды
 Toolbox(/8) | Command description | Описание команды
