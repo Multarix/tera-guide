@@ -5,3 +5,4 @@ config.json
 generated-manifest.json
 newtonsoft.json.dll
 SHAGen.exe
+SHAGen.exe.config
