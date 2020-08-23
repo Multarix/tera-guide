@@ -24,7 +24,7 @@ function argogReveal(handlers) {
 			"message": "Dodge!",
 			"message_RU": "Уклоняйся!"
 		});
-	}, 3400);
+	}, 3600);
 }
 
 module.exports = {
