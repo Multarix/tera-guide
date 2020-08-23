@@ -1,8 +1,14 @@
+const Chroma = require("razer-chroma-nodejs");
 const DispatchWrapper = require('./dispatch');
 const fs = require('fs');
 const path = require('path');
 const dbg = require('./dbg');
 let voice = null;
+
+let rgb = (!Chroma) ? false : true;
+let rgbOn = false;
+let rgbDungeon = false;
+
 try { voice = require('./voice') }
 catch(e) { voice = null; }
 // Tank class ids(brawler + lancer)
@@ -291,6 +297,10 @@ class TeraGuide{
 		/** S_LOAD_TOPO **/
 
 		function entry_zone(zone) {
+			if(rgbOn && rgb){
+				rgbOn = false
+				try { Chroma.util.uninit(() => { rgbOn = false }); } catch(e){ debug_message(debug_errors, e) };
+			}
 			// Enable errors debug
 			let debug_errors = true;
 			// Disable trigger event flag
@@ -326,6 +336,9 @@ class TeraGuide{
 					throw 'Guide for zone ' + zone + ' not found in config';
 				}
 				active_guide = require('./guides/' + zone);
+        if(zone === 3023){
+          rgbDungeon = true
+        } else { rgbDungeon = false };
 				if ([3126, 3026, 9750, 9066, 9050, 9054, 9754, 9916, 9781, 3017, 9044, 9070, 9739, 9920, 9970, 9981].includes(zone)) {
 					spguide = true;   // skill  1000-3000
 					esguide = false;
@@ -382,7 +395,16 @@ class TeraGuide{
 			if (guide_found) {
 				// Try calling the "load" function
 				try {
-					active_guide.load(fake_dispatch);
+					if(rgb && rgbDungeon){
+						try {
+              setTimeout(() => {
+								Chroma.util.init(() => {
+                	rgbOn = true;
+                	active_guide.load(fake_dispatch);
+								}, 2000);
+              });
+            } catch(e){ debug_message(debug_errors, e) };
+					} else { active_guide.load(fake_dispatch) };
 				} catch(e) {
 					debug_message(debug_errors, e);
 				}

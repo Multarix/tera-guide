@@ -5,7 +5,6 @@
 const Chroma = require("razer-chroma-nodejs");
 
 let rgbAvailable = (!Chroma) ? false : true;
-console.log(`rbg available: ${rgbAvailable}`);
 const {SpawnVector, SpawnCircle, SpawnSemicircle} = require("../lib");
 
 let lastboss = false;
@@ -140,10 +139,20 @@ function start_1boss80(handlers) {
 	setTimeout(() => print = true, 10000);
 }
 
-function bossOneDead() {
-	console.log(`Boss one dead: ${bossOne}`);
+function bossOneDead(handlers) {
 	if(!bossOne){
-		if(rgbAvailable) Chroma.util.uninit(() => {  rgbAvailable = false; console.log("chroma off"); });
+		if(rgbAvailable){
+			try {
+				Chroma.util.uninit(() => {
+					rgbAvailable = false;
+					handlers["text"]({
+						"sub_type": "CRMSG",
+						"message": 'Razer Chroma has been turned off',
+						"message_RU": 'Razer Chroma выключена'
+					});
+				});
+			} catch(e) { console.log(e) };
+		}
 		bossOne = true;
 	}
 }
