@@ -2,9 +2,6 @@
 //
 // made by michengs
 
-const Chroma = require("razer-chroma-nodejs");
-
-let rgbAvailable = (!Chroma) ? false : true;
 const {SpawnVector, SpawnCircle, SpawnSemicircle} = require("../lib");
 
 let lastboss = false;
@@ -22,7 +19,6 @@ let bossOne = false;
 function skilld_event(skillid, handlers, event, ent, dispatch) {
 	if (skillid === 99020020) { //死亡解除debuff
 		debuff = 0;
-		if(rgbAvailable) Chroma.effects.all.setColor(Chroma.colors.WHITE);
 
 		clearTimeout(timer2);
 		clearTimeout(timer1);
@@ -76,7 +72,6 @@ function skilld_event(skillid, handlers, event, ent, dispatch) {
 
 	if ([30231000, 1000].includes(skillid)) {   //sd
 		debuff = 1;
-		if(rgbAvailable) Chroma.effects.all.setColor(Chroma.colors.RED);
 		clearTimeout(timer1);
 		clearTimeout(timer2);
 		timer1 = setTimeout(()=> {
@@ -86,12 +81,10 @@ function skilld_event(skillid, handlers, event, ent, dispatch) {
 				"message_RU": "!"
 			});*/
 			debuff = 0;
-			if(rgbAvailable) Chroma.effects.all.setColor(Chroma.colors.WHITE);
 		}, 70000);
 	}
 	if ([30231001, 1001].includes(skillid)) {    //debuff为蓝色
 		debuff = 2;
-		if(rgbAvailable)	Chroma.effects.all.setColor(Chroma.colors.BLUE);
 		clearTimeout(timer2);
 		clearTimeout(timer1);
 		timer2 = setTimeout(()=> {
@@ -101,7 +94,6 @@ function skilld_event(skillid, handlers, event, ent, dispatch) {
 				"message_RU": "!"
 			});*/
 			debuff = 0;
-			if(rgbAvailable) Chroma.effects.all.setColor(Chroma.colors.WHITE);
 		}, 70000);
 	}
 	if ([1113, 1114].includes(skillid)) { //4连挥刀预判
@@ -112,7 +104,7 @@ function skilld_event(skillid, handlers, event, ent, dispatch) {
 			timer4 = setTimeout(()=> {
 				handlers['text']({
 					"sub_type": "message",
-					"message": "4 !!!",
+					"message": "4x Slash",
 					"message_RU": "4 полосы!!!"
 				});
 			}, 70000);
@@ -125,7 +117,6 @@ function skilld_event(skillid, handlers, event, ent, dispatch) {
 function start_boss() {
 	let print = true;
 	debuff = 0;
-	if(rgbAvailable) Chroma.effects.all.setColor(Chroma.colors.WHITE);
 }
 function start_1boss80(handlers) {
 	if(print) {
@@ -139,24 +130,6 @@ function start_1boss80(handlers) {
 	setTimeout(() => print = true, 10000);
 }
 
-function bossOneDead(handlers) {
-	if(!bossOne){
-		if(rgbAvailable){
-			try {
-				Chroma.util.uninit(() => {
-					rgbAvailable = false;
-					handlers["text"]({
-						"sub_type": "CRMSG",
-						"message": 'Razer Chroma has been turned off',
-						"message_RU": 'Razer Chroma выключена'
-					});
-				});
-			} catch(e) { console.log(e) };
-		}
-		bossOne = true;
-	}
-}
-
 module.exports = {
 	load(dispatch) {
 		({ player, entity, library, effect } = dispatch.require.library);
@@ -165,8 +138,6 @@ module.exports = {
 	// 1 BOSS
 	"h-3023-1000-99": [{"type": "func","func": start_boss}],
 	"h-3023-1000-80": [{"type": "func","func": start_1boss80}],
-	"h-3023-1000-0": [{"type": "func","func": bossOneDead}],
-	"h-3023-2000-99": [{"type": "func","func": bossOneDead}],
 	"s-3023-1000-104-0": [{"type": "text","sub_type": "message","message": 'Jump',"message_RU": "Прыжок + Стан"}],
 	"s-3023-1000-105-0": [{"type": "text","sub_type": "message","message": 'Back',"message_RU": "Поворот назад"}],
 	"s-3023-1000-110-0": [{"type": "text","sub_type": "message","message": 'Stun',"message_RU": "Передний стан"},
