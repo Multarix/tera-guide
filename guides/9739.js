@@ -1,6 +1,11 @@
 // Red Refuge
 //
 // made by multarix
+const Chroma = require("razer-chroma-nodejs");
+let rgbAvailable = (!Chroma) ? false : true;
+
+let enrageTimer;
+
 const {SpawnPoint, SpawnVector, SpawnCircle} = require("../lib");
 
 let player, entity, library, effect;
@@ -26,6 +31,16 @@ function argogReveal(handlers) {
 		});
 	}, 3600);
 }
+
+// function bossEnrage() {
+// 	if(false){
+// 		clearTimeout(timerEnrage);
+// 		Chroma.effects.all.setColor(Chroma.colors.RED);
+// 		enrageTimer = setTimeout(() => {
+// 			Chroma.effects.all.setColor(Chroma.colors.WHITE);
+// 		}, 35000);
+// 	}
+// }
 
 module.exports = {
 	load(dispatch) {

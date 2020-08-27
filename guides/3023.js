@@ -151,6 +151,7 @@ function bossOneDead(handlers) {
 						"message_RU": 'Razer Chroma выключена'
 					});
 				});
+				setTimeout(() => { Chroma.util.init(() => { null }) }, 30000);
 			} catch(e) { console.log(e) };
 		}
 		bossOne = true;

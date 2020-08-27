@@ -299,7 +299,7 @@ class TeraGuide{
 		function entry_zone(zone) {
 			if(rgbOn && rgb){
 				rgbOn = false
-				try { Chroma.util.uninit(() => { rgbOn = false }); } catch(e){ debug_message(debug_errors, e) };
+				try { Chroma.util.uninit(() => { rgbOn = false }); } catch(e){ null; };
 			}
 			// Enable errors debug
 			let debug_errors = true;
@@ -336,7 +336,7 @@ class TeraGuide{
 					throw 'Guide for zone ' + zone + ' not found in config';
 				}
 				active_guide = require('./guides/' + zone);
-        if(zone === 3023){
+        if([3023, 9739].includes(zone)){
           rgbDungeon = true
         } else { rgbDungeon = false };
 				if ([3126, 3026, 9750, 9066, 9050, 9054, 9754, 9916, 9781, 3017, 9044, 9070, 9739, 9920, 9970, 9981].includes(zone)) {
