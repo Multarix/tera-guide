@@ -12,8 +12,8 @@ module.exports = {
 	},
 
 	// 1 BOSS
-	"s-735-1000-111-0": [{"type": "text","sub_type": "message","message": "BACK ATTACK","message_RU": "Удар назад"}],
-	"s-735-1000-112-0": [{"type": "text","sub_type": "message","message": "BACK ATTACK","message_RU": "Удар назад"}],
+	"s-735-1000-111-0": [{"type": "text","sub_type": "message","message": "Back Attack","message_RU": "Удар назад"}],
+	"s-735-1000-112-0": [{"type": "text","sub_type": "message","message": "Back Attack","message_RU": "Удар назад"}],
 	"s-735-1000-205-0": [{"type": "text","sub_type": "message","message": "Wind","message_RU": "Ветер!!！"}],
 	"s-735-1000-304-0": [{"type": "text","sub_type": "message","message": "OUT","message_RU": "ОТ НЕГО"}],
 	"s-735-1000-305-0": [{"type": "text","sub_type": "message","message": "IN","message_RU": "К НЕМУ"}],
@@ -22,10 +22,10 @@ module.exports = {
 	"s-735-1000-309-0": [{"type": "text","sub_type": "message","message": "Four missile launches were initiated","message_RU": "Запуск 4 ракет"}],
 
 	// 2 BOSS
-	"s-735-2000-102-0": [{"type": "text","class_position":"tank","sub_type": "message","message": "Front","message_RU": "Пила (Эвейд)"}],
+	"s-735-2000-102-0": [{"type": "text","class_position":"tank","sub_type": "message","message": "Pizza Cutter","message_RU": "Пила (Эвейд)"}],
 	"s-735-2000-105-0": [{"type": "text","sub_type": "message","message": "360","message_RU": "Крутилка (откид)"},{"type": "func","func": SpawnCircle.bind(null,false,553,0,0,10,280,100,4000)}],
-	"s-735-2000-108-0": [{"type": "text","sub_type": "message","message": "Back","message_RU": "Откид назад"}],
-	"s-735-2000-301-0": [{"type": "text","sub_type": "message","message": "Throws","message_RU": "Бомба"}],
+	"s-735-2000-108-0": [{"type": "text","sub_type": "message","message": "Back Swipe","message_RU": "Откид назад"}],
+	"s-735-2000-301-0": [{"type": "text","sub_type": "message","message": "Throwing Orb","message_RU": "Бомба"}],
 	"s-735-2000-304-0": [{"type": "text","sub_type": "message","message": "OUT","message_RU": "ОТ НЕГО"}],
 	"s-735-2007-201-0": [
 		{"type": "func","func": SpawnVector.bind(null,912,0,0,0,500,0,4000)},
@@ -107,7 +107,7 @@ module.exports = {
 	"s-735-3000-305-0": [{"type": "func","func": SpawnCircle.bind(null,false,553,0,0,8,300,100,7000)}],
 	"s-735-3000-321-0": [
 		{"type": "text","sub_type": "message","message": "Shield!","message_RU": "Щит!" },
-		{"type": "text","sub_type": "message","delay": 90000,"message": "After 10s shield! ", "message_RU": "Через 10 сек. щит!"}
+		{"type": "text","sub_type": "message","delay": 90000,"message": "Shield in 10 seconds!", "message_RU": "Через 10 сек. щит!"}
 	],
 	"s-735-3000-324-0": [{"type": "text","sub_type": "message","message": "Get OUT","message_RU": "Эвейд"}]
 };
