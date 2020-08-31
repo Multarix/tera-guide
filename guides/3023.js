@@ -10,7 +10,7 @@ function stunTiming(handlers) {
 			"message": "Dodge!",
 			"message_RU": "Уклоняйся!"
 		});
-	}, 1750);
+	}, 1500);
 }
 
 const {SpawnVector, SpawnCircle, SpawnSemicircle} = require("../lib");
