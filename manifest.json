@@ -3,7 +3,7 @@
     "dbg.json": {
     "hash": "489c0eb4d3994926de27f84b5acaacce54d946e9466c1c31f39dc3f4132e3129",
     "overwrite": false
-    }
+  },
     "dispatch.js": "aff231281880bac1a5309d6cbaefaf21a41f5d53ee7106ce012fcd549afe0ea9",
     "index.js": "8c51b864be556ba2627978a331cd951f8b9fd134a48f78a75dae58dca7a52ff0",
     "lib.js": "d4a15a4ac123b40fb6792cec6239f28e1bc8a8ecf028fc064309010e2ba73bb6",
