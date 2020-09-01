@@ -1,6 +1,7 @@
 // Akalath Quarantine
 //
 // made by michengs
+// modified by Multarix
 
 function stunTiming(handlers) {
 	setTimeout(() => {
@@ -10,7 +11,7 @@ function stunTiming(handlers) {
 			"message": "Dodge!",
 			"message_RU": "Уклоняйся!"
 		});
-	}, 1500);
+	}, 1250);
 }
 
 const {SpawnVector, SpawnCircle, SpawnSemicircle} = require("../lib");
@@ -152,7 +153,7 @@ module.exports = {
 	"s-3023-1000-104-0": [{"type": "text","sub_type": "message","message": 'Random Jump',"message_RU": "Прыжок + Стан"}],
 	"s-3023-1000-105-0": [{"type": "text","sub_type": "message","message": 'Back',"message_RU": "Поворот назад"}],
 	"s-3023-1000-110-0": [{"type": "text","sub_type": "message","message": 'Stun',"message_RU": "Передний стан"},
-						  {"type": "func","func": SpawnCircle.bind(null,false,553,0,175,10,225,0,6000)}
+						  {"type": "func","func": SpawnCircle.bind(null,false,553,0,175,10,275,0,6000)}
 	],
 	"s-3023-1000-111-0": [{"type": "text","sub_type": "message","message": 'Left Slash',"message_RU": "| Левая полоса"},
 						  {"type": "func","func": SpawnVector.bind(null,553,270,200,180,500,0,2000)},
