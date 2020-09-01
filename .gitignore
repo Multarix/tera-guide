@@ -1,3 +1,6 @@
+node_modules
+package-lock.json
+package.json
 manifest-generator.bat
 manifest-generator.js
 guides/test.js

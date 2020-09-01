@@ -1,12 +1,11 @@
+const HIGHLIGHT_ITEM = 110684; // Tier 21 Superior Twin Swords
+const HIGHLIGHT_ITEM_BLUE = 89542; // Annihilation Disc (x1 effect)
+const HIGHLIGHT_ITEM_PURPLE = 89543; // Annihilation Disc (x2 effect)
+const HIGHLIGHT_ITEM_RED = 206960; // Zenobia's Breeze Crate
+const MARKER_ITEM = 88704; // Velika Banquet Coin
 
-const HIGHLIGHT_ITEM        = 110684; // Tier 21 Superior Twin Swords
-const HIGHLIGHT_ITEM_BLUE   = 89542;  // Annihilation Disc (x1 effect)
-const HIGHLIGHT_ITEM_PURPLE = 89543;  // Annihilation Disc (x2 effect)
-const HIGHLIGHT_ITEM_RED    = 206960; // Zenobia's Breeze Crate
-const MARKER_ITEM           = 88704;  // Velika Banquet Coin
-
-function SpawnItem(item, angle, distance, delay, duration, handlers, event, entity) {
-	angle =  Math.PI * angle / 180;
+function SpawnItem(item, angle, distance, delay, duration, handlers, event, entity){
+	angle = Math.PI * angle / 180;
 
 	SpawnObject("item", false, item,
 		0, 0,
@@ -17,12 +16,12 @@ function SpawnItem(item, angle, distance, delay, duration, handlers, event, enti
 	);
 }
 
-function SpawnMarker(target, angle, distance, delay, duration, highlight, label, handlers, event, entity) {
-	if (!label) {
+function SpawnMarker(target, angle, distance, delay, duration, highlight, label, handlers, event, entity){
+	if(!label){
 		label = ["SAFE SPOT", "SAFE"];
 	}
 
-	angle =  Math.PI * angle / 180;
+	angle = Math.PI * angle / 180;
 
 	SpawnObject("build_object", target, 1,
 		0, 0,
@@ -32,13 +31,13 @@ function SpawnMarker(target, angle, distance, delay, duration, highlight, label,
 		handlers, event, entity
 	);
 
-	if (highlight) {
+	if(highlight){
 		let item = HIGHLIGHT_ITEM;
 
-		switch (highlight) {
-			case "blue":   item = HIGHLIGHT_ITEM_BLUE;   break;
+		switch(highlight){
+			case "blue": item = HIGHLIGHT_ITEM_BLUE; break;
 			case "purple": item = HIGHLIGHT_ITEM_PURPLE; break;
-			case "red":    item = HIGHLIGHT_ITEM_RED;    break;
+			case "red": item = HIGHLIGHT_ITEM_RED; break;
 		}
 
 		SpawnObject("item", target, item,
@@ -51,8 +50,8 @@ function SpawnMarker(target, angle, distance, delay, duration, highlight, label,
 	}
 }
 
-function SpawnPoint(item, angle, distance, delay, duration, handlers, event, entity) {
-	angle =  Math.PI * angle / 180;
+function SpawnPoint(item, angle, distance, delay, duration, handlers, event, entity){
+	angle = Math.PI * angle / 180;
 
 	SpawnObject("collection", false, item,
 		0, 0,
@@ -63,10 +62,10 @@ function SpawnPoint(item, angle, distance, delay, duration, handlers, event, ent
 	);
 }
 
-function SpawnVector(item, offsetAngle, offsetDistance, angle, length, delay, duration, handlers, event, entity) {
+function SpawnVector(item, offsetAngle, offsetDistance, angle, length, delay, duration, handlers, event, entity){
 	angle = angle * Math.PI / 180;
 
-	for (let radius = 50; radius <= length; radius += 50) {
+	for(let radius = 50; radius <= length; radius += 50){
 		SpawnObject("collection", false, item,
 			offsetAngle, offsetDistance,
 			angle, radius,
@@ -77,8 +76,8 @@ function SpawnVector(item, offsetAngle, offsetDistance, angle, length, delay, du
 	}
 }
 
-function SpawnCircle(target, item, offsetAngle, offsetDistance, interval, radius, delay, duration, handlers, event, entity) {
-	for (let angle = -Math.PI; angle <= Math.PI; angle +=  Math.PI * interval / 180) {
+function SpawnCircle(target, item, offsetAngle, offsetDistance, interval, radius, delay, duration, handlers, event, entity){
+	for(let angle = -Math.PI; angle <= Math.PI; angle += Math.PI * interval / 180){
 		SpawnObject("collection", target, item,
 			offsetAngle, offsetDistance,
 			angle, radius,
@@ -89,20 +88,20 @@ function SpawnCircle(target, item, offsetAngle, offsetDistance, interval, radius
 	}
 }
 
-function SpawnSemicircle(degree1, degree2, item, offsetAngle, offsetDistance, interval, radius, delay, duration, handlers, event, entity) {
+function SpawnSemicircle(degree1, degree2, item, offsetAngle, offsetDistance, interval, radius, delay, duration, handlers, event, entity){
 	let db, dg;
 
-	if (degree1 <= 180 && degree2 <= 180) {
+	if(degree1 <= 180 && degree2 <= 180){
 		db = -degree1 / 180;
-		dg =  degree2 / 180;
-	} else if (degree1 > 180 && degree2 > 180) {
+		dg = degree2 / 180;
+	} else if(degree1 > 180 && degree2 > 180){
 		db = -degree1 / 180;
-		dg =  degree2 / 180;
+		dg = degree2 / 180;
 	} else {
 		db = -degree1 / 180;
-		dg =  degree2 / 180;
+		dg = degree2 / 180;
 
-		for (let angle = -Math.PI * db; angle <= Math.PI; angle +=  Math.PI * interval / 180) {
+		for(let angle = -Math.PI * db; angle <= Math.PI; angle += Math.PI * interval / 180){
 			SpawnObject("collection", false, item,
 				offsetAngle, offsetDistance,
 				angle, radius,
@@ -112,7 +111,7 @@ function SpawnSemicircle(degree1, degree2, item, offsetAngle, offsetDistance, in
 			);
 		}
 
-		for (let angle = Math.PI ; angle <= Math.PI * dg; angle +=  Math.PI * interval / 180) {
+		for(let angle = Math.PI ; angle <= Math.PI * dg; angle += Math.PI * interval / 180){
 			SpawnObject("collection", false, item,
 				offsetAngle, offsetDistance,
 				angle, radius,
@@ -125,7 +124,7 @@ function SpawnSemicircle(degree1, degree2, item, offsetAngle, offsetDistance, in
 		return;
 	}
 
-	for (let angle = -Math.PI * db; angle <= Math.PI * dg; angle +=  Math.PI * interval / 180) {
+	for(let angle = -Math.PI * db; angle <= Math.PI * dg; angle += Math.PI * interval / 180){
 		SpawnObject("collection", false, item,
 			offsetAngle, offsetDistance,
 			angle, radius,
@@ -136,14 +135,14 @@ function SpawnSemicircle(degree1, degree2, item, offsetAngle, offsetDistance, in
 	}
 }
 
-function SpawnObject(type, target, item, offsetAngle, offsetDistance, angle, distance, delay, duration, label, handlers, event, entity) {
+function SpawnObject(type, target, item, offsetAngle, offsetDistance, angle, distance, delay, duration, label, handlers, event, entity){
 	let shield_loc;
 
 	// use local delay
 	setTimeout(() => {
-		if (target && entity.dest !== undefined) {
+		if(target && entity.dest !== undefined){
 			shield_loc = entity['dest'].clone();
-		} else if (entity.loc !== undefined) {
+		} else if(entity.loc !== undefined){
 			shield_loc = entity['loc'].clone();
 		} else {
 			return;
@@ -153,7 +152,7 @@ function SpawnObject(type, target, item, offsetAngle, offsetDistance, angle, dis
 
 		applyDistance(shield_loc, offsetDistance, 360 - offsetAngle);
 
-		switch (type) {
+		switch(type){
 			// S_SPAWN_COLLECTION
 			case "collection":
 				handlers['spawn']({
@@ -197,10 +196,10 @@ function SpawnObject(type, target, item, offsetAngle, offsetDistance, angle, dis
 	}, delay);
 }
 
-function applyDistance(loc, offsetDistance, offsetAngle) {
-	let r = loc.w; //(loc.w / 0x8000) * Math.PI;
-	let rads = (offsetAngle * Math.PI / 180);
-	let finalrad = r - rads;
+function applyDistance(loc, offsetDistance, offsetAngle){
+	const r = loc.w; // (loc.w / 0x8000) * Math.PI;
+	const rads = (offsetAngle * Math.PI / 180);
+	const finalrad = r - rads;
 
 	loc.x += Math.cos(finalrad) * offsetDistance;
 	loc.y += Math.sin(finalrad) * offsetDistance;
