@@ -13,7 +13,7 @@ function argogStun(handlers) {
 			"message": "Dodge!",
 			"message_RU": "Уклоняйся!"
 		});
-	}, 1750);
+	}, 1500);
 }
 
 function argogReveal(handlers) {
