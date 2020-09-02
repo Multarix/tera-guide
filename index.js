@@ -3,7 +3,6 @@ const fs = require('fs');
 const path = require('path');
 const dbg = require('./dbg');
 let voice = null;
-
 try { voice = require('./voice'); } catch (e){ voice = null; }
 // Tank class ids(brawler + lancer)
 const TANK_CLASS_IDS = [1, 10];
@@ -305,7 +304,7 @@ class TeraGuide {
 			// Remove potential cached guide from require cache, so that we don't need to relog to refresh guide
 			try {
 				delete require.cache[require.resolve('./guides/' + zone)];
-			} catch (e){ console.log(e); }
+			} catch (e){}
 			// Try loading a guide
 			try {
 				// Find and load zone data from settings
@@ -324,7 +323,7 @@ class TeraGuide {
 					throw 'Guide for zone ' + zone + ' not found in config';
 				}
 				active_guide = require('./guides/' + zone);
-				if([3126, 3026, 9750, 9066, 9050, 9054, 9754, 9916, 9781, 3017, 9044, 9070, 9739, 9920, 9970, 9981].includes(zone)){
+				if([3126, 3026, 9750, 9066, 9050, 9054, 9754, 9916, 9781, 3017, 9044, 9070, 9920, 9970, 9981].includes(zone)){
 					spguide = true; // skill  1000-3000
 					esguide = false;
 				} else if([9000, 3023, 9759].includes(zone)){
@@ -416,7 +415,7 @@ class TeraGuide {
 				// Clear library cache
 				try {
 					delete require.cache[require.resolve('./lib')];
-				} catch (e){ console.log(e); }
+				} catch (e){}
 				// If arg1 is "load", load guide from arg2 specified
 				if(arg1 === "load"){
 					if(!arg2) return command.message(`Invalid values for sub command "event" ${arg1}`);
