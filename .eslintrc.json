@@ -20,6 +20,7 @@
 		"max-nested-callbacks": ["error", { "max": 4 }],
 		"max-statements-per-line": ["error", { "max": 4 }],
 		"no-console": "off",
+		"no-empty": ["error", { "allowEmptyCatch": true }],
 		"no-empty-function": "error",
 		"no-floating-decimal": "error",
 		"no-multi-spaces": "error",
