@@ -18,8 +18,8 @@ module.exports = {
 	"s-735-1000-304-0": [{ "type": "text", "sub_type": "message", "message": "OUT", "message_RU": "ОТ НЕГО" }],
 	"s-735-1000-305-0": [{ "type": "text", "sub_type": "message", "message": "IN", "message_RU": "К НЕМУ" }],
 	"s-735-1000-306-0": [{ "type": "text", "sub_type": "message", "message": "Bombs", "message_RU": "Бомбы!" }],
-	"s-735-1000-307-0": [{ "type": "text", "sub_type": "message", "message": "Pull (iframable)", "message_RU": "Стяжка!" }],
-	"s-735-1000-309-0": [{ "type": "text", "sub_type": "message", "message": "Four missile start", "message_RU": "Запуск 4 ракет" }],
+	"s-735-1000-307-0": [{ "type": "text", "sub_type": "message", "message": "Pull (dodge)", "message_RU": "Стяжка!" }],
+	"s-735-1000-309-0": [{ "type": "text", "sub_type": "message", "message": "Four missiles", "message_RU": "Запуск 4 ракет" }],
 
 	// 2 BOSS
 	"s-735-2000-102-0": [{ "type": "text", "class_position":"tank", "sub_type": "message", "message": "Pizza Cutter (Dodge)", "message_RU": "Пила (Эвейд)" },
@@ -45,7 +45,7 @@ module.exports = {
 		{ "type": "func", "func": SpawnVector.bind(null, 912, 0, 0, 270, 500, 0, 4000) }],
 
 	// 3 BOSS
-	"s-735-3000-116-0": [{ "type": "text", "sub_type": "message", "message": "Right safe", "message_RU": "Справа сейф" },
+	"s-735-3000-116-0": [{ "type": "text", "sub_type": "message", "message": "Go Right", "message_RU": "Справа сейф" },
 		{ "type": "func", "func": SpawnPoint.bind(null, 553, 120, 250, 0, 3000) },
 		{ "type": "func", "func": SpawnPoint.bind(null, 553, 130, 240, 0, 3000) },
 		{ "type": "func", "func": SpawnPoint.bind(null, 553, 140, 230, 0, 3000) },
@@ -58,7 +58,7 @@ module.exports = {
 		{ "type": "func", "func": SpawnPoint.bind(null, 553, 330, 220, 0, 3000) },
 		{ "type": "func", "func": SpawnPoint.bind(null, 553, 340, 210, 0, 3000) },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 350, 210, 0, 290, 0, 3000) }],
-	"s-735-3000-117-0": [{ "type": "text", "sub_type": "message", "message": "Left safe", "message_RU": "Слева сейф" },
+	"s-735-3000-117-0": [{ "type": "text", "sub_type": "message", "message": "Go Left", "message_RU": "Слева сейф" },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 10, 210, 0, 290, 0, 3000) },
 		{ "type": "func", "func": SpawnPoint.bind(null, 553, 20, 210, 0, 3000) },
 		{ "type": "func", "func": SpawnPoint.bind(null, 553, 30, 220, 0, 3000) },
@@ -71,7 +71,7 @@ module.exports = {
 		{ "type": "func", "func": SpawnPoint.bind(null, 553, 210, 220, 0, 3000) },
 		{ "type": "func", "func": SpawnPoint.bind(null, 553, 200, 210, 0, 3000) },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 190, 210, 180, 290, 0, 3000) }],
-	"s-735-3000-118-0": [{ "type": "text", "sub_type": "message", "message": "Left safe", "message_RU": "Слева сейф" },
+	"s-735-3000-118-0": [{ "type": "text", "sub_type": "message", "message": "Go Left", "message_RU": "Слева сейф" },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 10, 210, 0, 290, 0, 3000) },
 		{ "type": "func", "func": SpawnPoint.bind(null, 553, 20, 210, 0, 3000) },
 		{ "type": "func", "func": SpawnPoint.bind(null, 553, 30, 220, 0, 3000) },
@@ -84,7 +84,7 @@ module.exports = {
 		{ "type": "func", "func": SpawnPoint.bind(null, 553, 210, 220, 0, 3000) },
 		{ "type": "func", "func": SpawnPoint.bind(null, 553, 200, 210, 0, 3000) },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 190, 210, 180, 290, 0, 3000) }],
-	"s-735-3000-119-0": [{ "type": "text", "sub_type": "message", "message": "Right safe", "message_RU": "Справа сейф" },
+	"s-735-3000-119-0": [{ "type": "text", "sub_type": "message", "message": "Go Right", "message_RU": "Справа сейф" },
 		{ "type": "func", "func": SpawnPoint.bind(null, 553, 120, 250, 0, 3000) },
 		{ "type": "func", "func": SpawnPoint.bind(null, 553, 130, 240, 0, 3000) },
 		{ "type": "func", "func": SpawnPoint.bind(null, 553, 140, 230, 0, 3000) },
