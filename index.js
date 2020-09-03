@@ -4,16 +4,13 @@ const path = require('path');
 const dbg = require('./dbg');
 let voice = null;
 try { voice = require('./voice'); } catch (e){ voice = null; }
-// Tank class ids(brawler + lancer)
-const TANK_CLASS_IDS = [1, 10];
-// Dps class ids(not counting warrior)
-const DPS_CLASS_IDS = [2, 3, 4, 5, 8, 9, 11, 12];
-// Healer class ids
-const HEALER_CLASS_IDS = [6, 7];
-// Warrior Defence stance abnormality ids
-const WARRIOR_TANK_IDS = [100200, 100201];
-// Zones with skillid range 1000-3000
-const SP_ZONES = [
+
+const TANK_CLASS_IDS = [1, 10]; // Tank class ids(brawler + lancer)
+const DPS_CLASS_IDS = [2, 3, 4, 5, 8, 9, 11, 12]; // Dps class ids(not counting warrior)
+const HEALER_CLASS_IDS = [6, 7]; // Healer class ids
+const WARRIOR_TANK_IDS = [100200, 100201]; // Warrior Defence stance abnormality ids
+
+const SP_ZONES = [ // Zones with skillid range 1000-3000
 	3026, // Corrupted Skynest
 	3126, // Corrupted Skynest (Hard)
 	9050, // Rift's Edge (Hard)
@@ -29,8 +26,8 @@ const SP_ZONES = [
 	9970, // Ruinous Manor (Hard)
 	9981 // Velik's Sanctuary (Hard)
 ];
-// Zones with skillid range 100-200-3000
-const ES_ZONES = [
+
+const ES_ZONES = [ // Zones with skillid range 100-200-3000
 	3023, // Akalath Quarantine
 	9000, // ???
 	9759 // Forsaken Island (Hard)
@@ -158,38 +155,47 @@ class TeraGuide {
 			}
 			switch(class_position){
 				case "tank":{
-					// if it's a warrior with dstance abnormality
-					if(player.job === 0){
-						// Loop thru tank abnormalities
-						for(const id of WARRIOR_TANK_IDS){
-							// if we have the tank abnormality return true
-							if(effect.hasAbnormality(id)) return true;
+					if(player.job === 0){ // if it's a warrior with dstance abnormality
+						for(const id of WARRIOR_TANK_IDS){ // Loop thru tank abnormalities
+							if(effect.hasAbnormality(id)) return true; // if we have the tank abnormality return true
 						}
 					}
-					// if it's a tank return true
-					if(TANK_CLASS_IDS.includes(player.job)) return true;
-					break;
 				}
+					if(TANK_CLASS_IDS.includes(player.job)) return true; // if it's a tank return true
+					break;
+
 				case "dps":{
-					// If it's a warrior with dstance abnormality
-					if(player.job === 0){
-						// Loop thru tank abnormalities
-						for(const id of WARRIOR_TANK_IDS){
-							// if we have the tank abnormality return false
-							if(effect.hasAbnormality(id)) return false;
+					if(player.job === 0){ // If it's a warrior with dstance abnormality
+						for(const id of WARRIOR_TANK_IDS){ // Loop thru tank abnormalities
+							if(effect.hasAbnormality(id)) return false; // if we have the tank abnormality return false
 						}
-						// warrior didn't have tank abnormality
-						return true;
+						return true; // warrior didn't have tank abnormality
 					}
-					// if it's a dps return true
-					if(DPS_CLASS_IDS.includes(player.job)) return true;
+					if(DPS_CLASS_IDS.includes(player.job)) return true; // if it's a dps return true
 					break;
 				}
+
 				case "heal":{
-					// if it's a healer return true
-					if(HEALER_CLASS_IDS.includes(player.job)) return true;
+					if(HEALER_CLASS_IDS.includes(player.job)) return true; // if it's a healer return true
 					break;
 				}
+
+				// There are some things a priest can do that a mystic cannot (eg: Arise)
+				case "priest":{
+					if(player.job === 6) return true; // if it's a priest return true
+					break;
+				}
+				// And there are some that a mystic can do that a priest cannot (eg: idk I'm a priest main)
+				case "mystic":{
+					if(player.job === 7) return true; // if it's a mystic return true
+					break;
+				}
+				// And I mean, lancer is arguably the better "tank" with more utility (eg: Blue Shield)
+				case "lancer":{
+					if(player.job === 1) return true; // if it's a lancer return true
+					break;
+				}
+
 				default:{
 					debug_message(true, "Failed to find class_position value:", class_position);
 				}
