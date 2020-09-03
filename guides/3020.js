@@ -158,7 +158,7 @@ function start_Sailing_Instance(handlers, event, entity, dispatch){
 					}
 					debuff_call_event = setTimeout(() => {
 						handlers['text']({
-							"sub_type": "notification",
+							"sub_type": "alert",
 							"message": debuffs_targe[event.id].msgt,
 							"message_RU": debuffs_targe[event.id].msg
 						});
@@ -251,14 +251,12 @@ module.exports = {
 	"s-3020-2200-128-0": [{ "type": "text", "sub_type": "message", "message": "Upper cut (Knock up)", "message_RU": "Черкаш (подлет)" }],
 	"s-3020-2200-129-0": [{ "type": "text", "sub_type": "message", "message": "Hammer Toss ~ Skull", "message_RU": "Полоса в цель" },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 90, 100, 0, 500, 200, 2000) },
-		{ "type": "func", "func": SpawnVector.bind(null, 553, 270, 100, 0, 500, 200, 2000) }
-	],
+		{ "type": "func", "func": SpawnVector.bind(null, 553, 270, 100, 0, 500, 200, 2000) }],
 	// "s-3020-2200-131-0": [{"type": "text","sub_type": "message","message": "Jump","message_RU": "Прыжок"}],
 	"s-3020-2200-133-1": [{ "type": "text", "sub_type": "message", "message": "Donuts", "message_RU": "Бублики" },
 		{ "type": "func", "func": SpawnCircle.bind(null, true, 445, 0, 0, 10, 300, 200, 5000) },
 		{ "type": "func", "func": SpawnCircle.bind(null, true, 445, 0, 0, 6, 600, 200, 5000) },
-		{ "type": "func", "func": SpawnCircle.bind(null, true, 445, 0, 0, 4, 900, 200, 5000) }
-	],
+		{ "type": "func", "func": SpawnCircle.bind(null, true, 445, 0, 0, 4, 900, 200, 5000) }],
 	"s-3020-2200-135-0": [{ "type": "text", "sub_type": "message", "message": "Puddles Inc (Jump)", "message_RU": "Волны х5" }],
 
 	"s-3020-2200-137-0": [{ "type": "text", "sub_type": "message", "message": "Outward Pluse", "message_RU": "Волна от" }],

@@ -93,8 +93,7 @@ const SPAWNING_FIRST_CIRCLE_FLOWERS = [
 	{ "type": "func", "func": SpawnVector.bind(null, 553, 0, 0, 180, 500, 0, 2500) },
 	{ "type": "func", "func": SpawnVector.bind(null, 553, 0, 0, 0, 500, 0, 1500) },
 	{ "type": "func", "func": SpawnCircle.bind(null, false, 445, 0, 0, 18, 143, 1500, 5000) },
-	{ "type": "func", "func": SpawnCircle.bind(null, false, 445, 0, 0, 12, 293, 1500, 5000) }
-];
+	{ "type": "func", "func": SpawnCircle.bind(null, false, 445, 0, 0, 12, 293, 1500, 5000) }];
 // heart thrust+clockwise spin+left swipe+AOEs from in to out
 const SPAWNING_SECOND_CIRCLE_FLOWERS = [
 	{ "type": "text", "class_position":"tank", "sub_type": "message", "message": "Left safe > Outward waves", "message_RU": "Влево сейф > Волны от" },
@@ -104,8 +103,7 @@ const SPAWNING_SECOND_CIRCLE_FLOWERS = [
 	{ "type": "func", "func": SpawnVector.bind(null, 553, 0, 0, 180, 500, 0, 2500) },
 	{ "type": "func", "func": SpawnVector.bind(null, 553, 0, 0, 0, 500, 0, 1500) },
 	{ "type": "func", "func": SpawnCircle.bind(null, false, 445, 0, 0, 18, 157, 1500, 5000) },
-	{ "type": "func", "func": SpawnCircle.bind(null, false, 445, 0, 0, 12, 307, 1500, 5000) }
-];
+	{ "type": "func", "func": SpawnCircle.bind(null, false, 445, 0, 0, 12, 307, 1500, 5000) }];
 
 module.exports = {
 	load(dispatch){
@@ -129,29 +127,27 @@ module.exports = {
 
 	// 2 BOSS, NOT ENRAGED
 	"s-920-2000-1108-0": [{ "type": "text", "sub_type": "message", "message": "Target swing", "message_RU": "Таргет" }],
-	"s-920-2000-1113-0": [{ "type": "text", "sub_type": "message", "message": "Left hand", "message_RU": "| Левая полоса" }],
-	"s-920-2000-1114-0": [{ "type": "text", "sub_type": "message", "message": "Right hand", "message_RU": "Правая полоса |" }],
+	"s-920-2000-1113-0": [{ "type": "text", "sub_type": "message", "message": "Left slash", "message_RU": "Левая полоса" }],
+	"s-920-2000-1114-0": [{ "type": "text", "sub_type": "message", "message": "Right slash", "message_RU": "Правая полоса" }],
 	"s-920-2000-1106-0": [{ "type": "text", "sub_type": "message", "message": "Spin attack", "message_RU": "Крутилка" },
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 10, 320, 0, 3500) }
-	],
+		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 10, 320, 0, 3500) }],
 	"s-920-2000-1105-0": [{ "type": "text", "sub_type": "message", "message": "Back attack", "message_RU": "Удар назад" }],
 	"s-920-2000-1104-0": [{ "type": "text", "sub_type": "message", "message": "Random jump", "message_RU": "Прыжок (стан)" }],
 	"s-920-2000-1110-0": [{ "type": "text", "sub_type": "message", "message": "Stun attack", "message_RU": "Передний стан" }],
-	"s-920-2000-1111-0": [{ "type": "text", "sub_type": "message", "message": "Left hand", "message_RU": "| Левая полоса" }],
-	"s-920-2000-1112-0": [{ "type": "text", "sub_type": "message", "message": "Right hand", "message_RU": "Правая полоса |" }],
+	"s-920-2000-1111-0": [{ "type": "text", "sub_type": "message", "message": "Left slash", "message_RU": "Левая полоса" }],
+	"s-920-2000-1112-0": [{ "type": "text", "sub_type": "message", "message": "Right slash", "message_RU": "Правая полоса" }],
 
 	// 2 BOSS, ENRAGED
 	"s-920-2000-2108-0": [{ "type": "text", "sub_type": "message", "message": "Target swing", "message_RU": "Таргет" }],
-	"s-920-2000-2113-0": [{ "type": "text", "sub_type": "message", "message": "Left hand", "message_RU": "| Левая полоса" }],
-	"s-920-2000-2114-0": [{ "type": "text", "sub_type": "message", "message": "Right hand", "message_RU": "Правая полоса |" }],
+	"s-920-2000-2113-0": [{ "type": "text", "sub_type": "message", "message": "Left slash", "message_RU": "Левая полоса" }],
+	"s-920-2000-2114-0": [{ "type": "text", "sub_type": "message", "message": "Right slash", "message_RU": "Правая полоса" }],
 	"s-920-2000-2106-0": [{ "type": "text", "sub_type": "message", "message": "Spin attack", "message_RU": "Крутилка" },
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 10, 320, 0, 3500) }
-	],
+		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 10, 320, 0, 3500) }],
 	"s-920-2000-2105-0": [{ "type": "text", "sub_type": "message", "message": "Back attack", "message_RU": "Удар назад" }],
 	"s-920-2000-2104-0": [{ "type": "text", "sub_type": "message", "message": "Random jump", "message_RU": "Прыжок (стан)" }],
 	"s-920-2000-2110-0": [{ "type": "text", "sub_type": "message", "message": "Stun attack", "message_RU": "Передний стан" }],
-	"s-920-2000-2111-0": [{ "type": "text", "sub_type": "message", "message": "Left hand", "message_RU": "| Левая полоса" }],
-	"s-920-2000-2112-0": [{ "type": "text", "sub_type": "message", "message": "Right hand", "message_RU": "Правая полоса" }],
+	"s-920-2000-2111-0": [{ "type": "text", "sub_type": "message", "message": "Left slash", "message_RU": "Левая полоса" }],
+	"s-920-2000-2112-0": [{ "type": "text", "sub_type": "message", "message": "Right slash", "message_RU": "Правая полоса" }],
 
 	// 2 BOSS, SPECIAL ATTACKS
 	"s-920-2000-3119-0": [{ "type": "text", "sub_type": "message", "message": "Red: OUT safe", "message_RU": "Красный: Наружу сейф" }],
@@ -195,9 +191,12 @@ module.exports = {
 	"s-920-3000-1400-0": [{ "type": "text", "sub_type": "message", "message": "Clones: beam", "message_RU": "Копии: волны" }],
 	"s-920-3000-1401-0": [{ "type": "text", "sub_type": "message", "message": "Clones: spin", "message_RU": "Копии: круговые" }],
 	// color marks in cage
-	"ae-0-0-9203037": [{ "type": "text", "sub_type": "message", "message": "Red", "message_RU": "Красный" }, { "type": "func", "func": change_colour.bind(null, 'red') }],
-	"ae-0-0-9203038": [{ "type": "text", "sub_type": "message", "message": "Yellow", "message_RU": "Желтый" }, { "type": "func", "func": change_colour.bind(null, 'yellow') }],
-	"ae-0-0-9203039": [{ "type": "text", "sub_type": "message", "message": "Blue", "message_RU": "Синий" }, { "type": "func", "func": change_colour.bind(null, 'blue') }],
+	"ae-0-0-9203037": [{ "type": "text", "sub_type": "message", "message": "Red", "message_RU": "Красный" },
+		{ "type": "func", "func": change_colour.bind(null, 'red') }],
+	"ae-0-0-9203038": [{ "type": "text", "sub_type": "message", "message": "Yellow", "message_RU": "Желтый" },
+		{ "type": "func", "func": change_colour.bind(null, 'yellow') }],
+	"ae-0-0-9203039": [{ "type": "text", "sub_type": "message", "message": "Blue", "message_RU": "Синий" },
+		{ "type": "func", "func": change_colour.bind(null, 'blue') }],
 	// anti-clockwise
 	"s-920-3000-1317-0": [{ "type": "func", "func": set_clockwise.bind(null, false) }],
 	// clockwise

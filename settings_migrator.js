@@ -13,18 +13,20 @@ const DefaultSettings = {
 		{ "id": 3020, "name": "Sea of Honor", "name_RU": "Золотая чешуя", "verbose": true, "spawnObject": true },
 		{ "id": 3023, "name": "Akalath Quarantine", "name_RU": "Секретное подземелье крепости Берарк", "verbose": true, "spawnObject": true },
 		{ "id": 3026, "name": "Corrupted Skynest", "name_RU": "Логово Келсаика", "verbose": true, "spawnObject": true },
-		{ "id": 3027, "name": "Forbidden Arena", "name_RU": "Арена безумия", "verbose": true, "spawnObject": true },
+		{ "id": 3027, "name": "Forbidden Arena [Hagufna]", "name_RU": "Арена безумия [Бессмертный воин]", "verbose": true, "spawnObject": true },
 		{ "id": 3034, "name": "RK-9 Kennel (Hard)", "name_RU": "Ангар RK-9 (сложно)", "verbose": true, "spawnObject": true },
 		{ "id": 3101, "name": "Gossamer Vault", "name_RU": "Гнездо Паркин", "verbose": true, "spawnObject": true },
 		{ "id": 3102, "name": "Draakon Arena", "name_RU": "Командный центр", "verbose": true, "spawnObject": true },
+		{ "id": 3103, "name": "Forbidden Arena [Undying Warlord]", "name_RU": "Арена безумия [Этерния]", "verbose": true, "spawnObject": true },
 		{ "id": 3126, "name": "Corrupted Skynest (Hard)", "name_RU": "Логово Бессмертного Келсаика", "verbose": true, "spawnObject": true },
 		{ "id": 3201, "name": "Gossamer Vault (Hard)", "name_RU": "Гнездо сверкающей Паркин", "verbose": true, "spawnObject": true },
 		{ "id": 3202, "name": "Draakon Arena (Hard)", "name_RU": "Командный центр (сложно)", "verbose": true, "spawnObject": true },
+		{ "id": 3203, "name": "Forbidden Arena [Nightmare Undying Warlord]", "name_RU": "Арена безумия [Бессмертный]", "verbose": true, "spawnObject": true },
 		{ "id": 9044, "name": "Bahaar's Sanctum", "name_RU": "Святилище Бахаара", "verbose": true, "spawnObject": true },
 		{ "id": 9067, "name": "Demokron Factory (Hard)", "name_RU": "Лаборатория Берна (сложно)", "verbose": true, "spawnObject": true },
 		{ "id": 9720, "name": "Antaroth's Abyss", "name_RU": "Омут Антароса", "verbose": true, "spawnObject": true },
 		{ "id": 9735, "name": "RK-9 Kennel", "name_RU": "Ангар RK-9", "verbose": true, "spawnObject": true },
-		{ "id": 9739, "name": "Red Refuge", "name_RU": "Красный Убежище", "verbose": true, "spawnObject": true },
+		{ "id": 9739, "name": "Red Refuge", "name_RU": "Лагерь повстанцев", "verbose": true, "spawnObject": true },
 		{ "id": 9781, "name": "Velik's Sanctuary", "name_RU": "Святилище Велики", "verbose": true, "spawnObject": true },
 		{ "id": 9782, "name": "Grotto of Lost Souls", "name_RU": "Мастерская Леандра", "verbose": true, "spawnObject": true },
 		{ "id": 9920, "name": "Antaroth's Abyss (Hard)", "name_RU": "Омут Бездушного Антароса", "verbose": true, "spawnObject": true },
@@ -65,12 +67,12 @@ module.exports = function MigrateSettings(from_ver, to_ver, settings){
 				for(const option in settings){
 					if(option == "dungeons"){
 						const optionobj = [];
-						for(let i of settings[option]){
+						for(const i of settings[option]){
 							if(i.id == undefined) continue;
 							if(oldsettings[option]){
 								for(const oldi of oldsettings[option]){
 									if(oldi.id == i.id){
-										i = oldi;
+										i = oldi; // eslint-disable-line
 										break;
 									}
 								}

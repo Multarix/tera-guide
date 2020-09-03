@@ -1,30 +1,21 @@
-Forked from https://github.com/hsdn/tera-guide/
-
-# tera-guide
-A generic guide module for TERA with English and Russian translations (detects automaticly). Display hints on screen and drawing zones of bosses attacks and mechanics (also supports of Text-to-speech notifications).
+# Tera-Guide
+A generic guide module for TERA with English and Russian translations (detects automatically). Display hints on screen and drawing zones of bosses attacks and mechanics (also supports of Text-to-speech notifications).
 
 Основной модуль подсказок по данжам TERA с поддержкой русского и английского языков. Вывод подсказок в чат или на экран, а также отрисовка зон атак боссов и механик (присутствует возможность голосовых уведомлений).
 
 ## Dependencies / Зависимости
 https://github.com/tera-toolbox-mods/library
 
-Extract to "mods" directory in your Tera-Toolbox. DO NOT INSTALL IT AS "library-master" MAKE SURE IT'S NAMED "library".
+Extract to "mods" directory in your Tera-Proxy. DO NOT INSTALLED IT AS "library-master" MAKE SURE IT'S NAMED "library".
 
-Распаковать в директорию "mods" в вашей Tera-Toolbox. НЕ РАСПАКОВЫВАТЬ КАК "library-master", ДИРЕКТОРИЯ ДОЛЖНА НАЗЫВАТЬСЯ "library".
-
-For some rgb memes on certain supported dungeons:
-https://github.com/SharkFinPro/razer-chroma-nodejs
-
-Extract to node_modules folder inside of Tera-Toolbox. Make sure the folder is named "razer-chroma-nodejs"
-Current supported dungeons are: Akalath Quarantine
-
+Распаковать в директорию "mods" в вашей Tera-Proxy. НЕ РАСПАКОВЫВАТЬ КАК "library-master", ДИРЕКТОРИЯ ДОЛЖНА НАЗЫВАТЬСЯ "library".
 
 ## Commands / Команды
 Toolbox(/8) | Command description | Описание команды
 --- | --- | ---
 **guide** | Module on/off | Вкл./выкл. модуля
 **guide&nbsp;voice**<br>(default: on) | Text-to-speech (TTS) notices on/off, speech rate is set by command **guide `1`~`10`** | Вкл./выкл. голосовых уведомлений (TTS), скорость чтения задается командой **guide `1`~`10`**
-**guide&nbsp;lNotice**<br>(default: off) | Send notices to chat channel "Notice" instead of on-screen messages on/off (notices for the "Raid Notice" channel work regardless of this setting) | Вкл./выкл. отправки уведомлений в канал чата "Важно" вместо показа экранных сообщений (уведомления для канала "Сообщения рейда" работают не зависимо от данной настройки)
+**guide&nbsp;lNotice**<br>(default: off) | Send notices to chat channel "Notice" instead of on-screen messages on/off | Вкл./выкл. отправки уведомлений в канал чата "Важно" вместо показа экранных сообщений
 **guide&nbsp;gNotice**<br>(default: off) | Send notices to party chat channel on/off (will be visible for all party members) | Вкл./выкл. отправки уведомлений в чат группы (уведомления будут видеть все члены группы)
 **guide&nbsp;`1`~`10`**<br>(default: 2) | Set TTS speech rate | Регулировка скорости чтения голосовых сообщений
 **guide&nbsp;spawnObject**<br>(default: on) | Spawn marker objects on/off | Вкл./выкл. спавна маркировочных объектов
@@ -38,7 +29,7 @@ Toolbox(/8) | Command description | Описание команды
 id | Dungeon name | Название данжа
 --- | --- | ---
 9781 | Velik's Sanctuary | Святилище Велики
-9739 | Red Refuge | Красный Убежище
+9739 | Red Refuge | Лагерь повстанцев
 9735 | RK-9 Kennel | Ангар RK-9
 3034 | RK-9 Kennel (Hard) | Ангар RK-9 (сложно)
 9920 | Antaroth's Abyss (Hard) | Омут Бездушного Антароса
@@ -49,9 +40,13 @@ id | Dungeon name | Название данжа
 3020 | Sea of Honor | Золотая чешуя
 3026 | Corrupted Skynest | Логово Келсаика
 3126 | Corrupted Skynest (Hard) | Логово Бессмертного Келсаика
-3027 | Forbidden Arena | Арена безумия
 3102 | Draakon Arena | Командный центр
 3202 | Draakon Arena (Hard) | Командный центр (сложно)
+3027 | Forbidden Arena [Hagufna] | Арена безумия [Бессмертный воин]
+3103 | Forbidden Arena [Undying Warlord] | Арена безумия [Этерния]
+3203 | Forbidden Arena [Nightmare Undying Warlord]&#42; | Арена безумия [Бессмертный]&#42;
+
+&#42; - Dungeon on testing, possibly mistakes / Данж тестируется, возможны ошибки
 
 ## Notices settings / Настройка уведомлений
 
@@ -73,7 +68,7 @@ id | Dungeon name | Название данжа
 * When streamer mode is *on* (**stream** parameter), notices ONLY sent to Toolbox(/8) chat channel.   
   Если включен режим стримера (парам. **stream**), уведомления будут отправляться ТОЛЬКО в канал чата Toolbox(/8).
 
-## Development and debugging / Разработка и отладка
+## Development and Debugging / Разработка и отладка
 Подробнее на https://github.com/hsdn/tera-guide/wiki
 
 ## Credits
@@ -82,3 +77,4 @@ id | Dungeon name | Название данжа
 - **[ZC](https://github.com/tera-mod)** - Provided coordinates for rendering attack areas and mechanics
 - **[Owyn](https://github.com/Owyn)** - Developer of great guides for RK-9, AA and GV, whose code was used
 - **[ITunk](https://github.com/GrafNikola)** - Author of initial Russian translation
+- **[HSDN](https://github.com/HSDN) - The dude who I forked this from, and constantly steal his updates from... but he also steals some of mine so it's all good
