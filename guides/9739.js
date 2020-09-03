@@ -10,8 +10,6 @@ module.exports = {
 		({ player, entity, library, effect } = dispatch.require.library);
 	},
 
-	// Needs testing?
-
 	// Kalavese (1st boss)
 	"s-739-1000-105-0": [{ "type": "text", "sub_type": "message", "message": "Turn & Breath", "message_RU": "Поворот и дыхание" }],
 	"s-739-1000-308-0": [{ "type": "text", "sub_type": "message", "message": "In then Out", "message_RU": "В то время в" },
@@ -41,12 +39,12 @@ module.exports = {
 	"s-739-3000-107-0": [{ "type": "text", "sub_type": "message", "message": "Many Hits", "message_RU": "Кнут" }],
 	"s-739-3000-115-0": [{ "type": "text", "sub_type": "message", "message": 'Incoming Stun', "message_RU": "Рёв (Эвейд)!!!" },
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 10, 630, 0, 4000) },
-		{ "type": "text", "sub_type": "message", "delay": 1800, "message": 'Dodge!', "message_RU": "Уклоняйся" }],
+		{ "type": "text", "sub_type": "message", "delay": 2000, "message": 'Dodge!', "message_RU": "Уклоняйся" }],
 	"s-739-3000-118-0": [{ "type": "text", "sub_type": "message", "message": "Spin", "message_RU": "Кнут" }],
 	// Revealed Argog
 	"s-739-3000-167-0": [{ "type": "text", "sub_type": "message", "message": "Many Hits", "message_RU": "Кнут" }],
 	"s-739-3000-175-0": [{ "type": "text", "sub_type": "message", "message": 'Incoming Stun', "message_RU": "Рёв (Эвейд)!!!" },
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 10, 630, 0, 4000) },
-		{ "type": "text", "sub_type": "message", "delay": 1800, "message": 'Dodge!', "message_RU": "Уклоняйся" }],
+		{ "type": "text", "sub_type": "message", "delay": 2000, "message": 'Dodge!', "message_RU": "Уклоняйся" }],
 	"s-739-3000-178-0": [{ "type": "text", "sub_type": "message", "message": "Spin", "message_RU": "Кнут" }]
 };
