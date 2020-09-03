@@ -389,7 +389,7 @@ class TeraGuide {
 							"delay": 8000,
 							"message_RU": 'Вы вошли в ES данж: ' + cr + entered_zone_data.name_RU + cw + ' [' + zone + ']',
 							"message": 'Enter ES Dungeon: ' + cr + entered_zone_data.name + cw + ' [' + zone + ']'
-						 });
+						});
 					} else {
 						text_handler({
 							"sub_type": "PRMSG",
