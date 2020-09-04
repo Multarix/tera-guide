@@ -35,16 +35,17 @@ module.exports = {
 
 	// Argog (3rd boss)
 	"h-739-3001-30": [{ "type": "text", "sub_type": "message", "message": "Reveal Soon", "message_RU": "Скоро появится" }],
-	"s-739-3000-201-0": [{ "type": "text", "sub_type": "message", "delay": 3650, "message": 'Dodge!', "message_RU": "Уклоняйся" }],
-	"s-739-3000-107-0": [{ "type": "text", "sub_type": "message", "message": "Many Hits", "message_RU": "Кнут" }],
-	"s-739-3000-115-0": [{ "type": "text", "sub_type": "message", "message": 'Incoming Stun', "message_RU": "Рёв (Эвейд)!!!" },
+	"s-739-3000-201-0": [{ "type": "text", "sub_type": "message", "message": 'Blue Shield', "message_RU": "Синий щит", "class_position": "lancer" },
+		{ "type": "text", "sub_type": "message", "delay": 3650, "message": 'Dodge!', "message_RU": "Уклоняйся" }],
+	"s-739-3000-107-0": [{ "type": "text", "sub_type": "message", "message": "Many Hits", "message_RU": "Много хитов" }],
+	"s-739-3000-115-0": [{ "type": "text", "sub_type": "message", "message": 'Incoming Stun', "message_RU": "Входящее оглушение" },
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 10, 630, 0, 4000) },
 		{ "type": "text", "sub_type": "message", "delay": 2000, "message": 'Dodge!', "message_RU": "Уклоняйся" }],
-	"s-739-3000-118-0": [{ "type": "text", "sub_type": "message", "message": "Spin", "message_RU": "Кнут" }],
+	"s-739-3000-118-0": [{ "type": "text", "sub_type": "message", "message": "Spin", "message_RU": "Вращение" }],
 	// Revealed Argog
-	"s-739-3000-167-0": [{ "type": "text", "sub_type": "message", "message": "Many Hits", "message_RU": "Кнут" }],
-	"s-739-3000-175-0": [{ "type": "text", "sub_type": "message", "message": 'Incoming Stun', "message_RU": "Рёв (Эвейд)!!!" },
+	"s-739-3000-167-0": [{ "type": "text", "sub_type": "message", "message": "Many Hits", "message_RU": "Много хитов" }],
+	"s-739-3000-175-0": [{ "type": "text", "sub_type": "message", "message": 'Incoming Stun', "message_RU": "Входящее оглушение" },
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 10, 630, 0, 4000) },
 		{ "type": "text", "sub_type": "message", "delay": 2000, "message": 'Dodge!', "message_RU": "Уклоняйся" }],
-	"s-739-3000-178-0": [{ "type": "text", "sub_type": "message", "message": "Spin", "message_RU": "Кнут" }]
+	"s-739-3000-178-0": [{ "type": "text", "sub_type": "message", "message": "Spin", "message_RU": "Вращение" }]
 };
