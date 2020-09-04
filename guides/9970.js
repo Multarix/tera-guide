@@ -20,8 +20,7 @@ const EVENT_FOR_DEBUFFS = [
 		"delay": SECOND_TIMER_DELAY,
 		"message": "Debuff swap will happen soon",
 		"message_RU": "Скоро смена дебаффа"
-	}
-];
+	}];
 
 module.exports = {
 	load(dispatch){

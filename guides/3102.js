@@ -23,8 +23,7 @@ module.exports = {
 	// 120 > 114
 	"s-3102-1000-120-0": [{ "type": "text", "sub_type": "message", "message": "Many pokes | Stun (AOE)", "message_RU": "Несколько ударов | Стан (AOE)" }],
 	"s-3102-1000-114-0": [{ "type": "text", "sub_type": "message", "message": "Stun (AOE)", "message_RU": "Стан (AOE)" },
-		{ "type": "func", "func": SpawnCircle.bind(null, true, 553, 0, 0, 16, 420, 100, 3000) }
-	],
+		{ "type": "func", "func": SpawnCircle.bind(null, true, 553, 0, 0, 16, 420, 100, 3000) }],
 	"s-3102-1000-111-0": [{ "type": "text", "sub_type": "message", "message": "Leap (Stun)", "message_RU": "Прыжок (стан)" }/* ,
 		{"type": "func","func": SpawnCircle.bind(null,true,553,0,0,16,300,0,2000)} */],
 

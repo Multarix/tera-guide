@@ -39,8 +39,8 @@ function print_twenty(handlers){
 }
 
 // 3 boss: counter of back attacks
-function back_attack_HM(handlers){
-	clearTimeout(timer);
+function back_attack_HM(handlers, event, ent, dispatch){
+	dispatch.clearTimeout(timer);
 	counter++;
 	if(counter >= 2){
 		handlers['text']({
@@ -49,7 +49,7 @@ function back_attack_HM(handlers){
 			"message_RU": "Задний"
 		});
 	}
-	timer = setTimeout(()=> {
+	timer = dispatch.setTimeout(()=> {
 		counter = 0;
 	}, 3000);
 }
@@ -62,19 +62,19 @@ const COLOURS_OFFSETS = {
 	"yellow": 120,
 	"blue": 240
 };
-function set_clockwise(clockwise, handlers, event, entity, dispatch){
-	setTimeout(()=> {
+function set_clockwise(clockwise, handlers, event, ent, dispatch){
+	dispatch.setTimeout(()=> {
 		// Get the colour rotation
 		const colour_rotation = clockwise ? ["red", "yellow", "blue"] : ["blue", "yellow", "red"];
 
 		// Loop thru the three cage rotations
 		for(let i = 0; i < 3; i++){
 			const current_colour = colour_rotation[(colour_rotation.indexOf(colour_to_use) + i) % 3];
-			SpawnMarker(false, COLOURS_OFFSETS[current_colour], 150, i * 2600, (i + 1) * 3000, true, null, handlers, event, entity);
+			SpawnMarker(false, COLOURS_OFFSETS[current_colour], 150, i * 2600, (i + 1) * 3000, true, null, handlers, event, ent, dispatch);
 		}
 
 		// clear out clockwise
-		setTimeout(()=> {
+		dispatch.setTimeout(()=> {
 			clockwise = null;
 		}, 12000);
 	}, 1000);
@@ -191,12 +191,9 @@ module.exports = {
 	"s-920-3000-1400-0": [{ "type": "text", "sub_type": "message", "message": "Clones: beam", "message_RU": "Копии: волны" }],
 	"s-920-3000-1401-0": [{ "type": "text", "sub_type": "message", "message": "Clones: spin", "message_RU": "Копии: круговые" }],
 	// color marks in cage
-	"ae-0-0-9203037": [{ "type": "text", "sub_type": "message", "message": "Red", "message_RU": "Красный" },
-		{ "type": "func", "func": change_colour.bind(null, 'red') }],
-	"ae-0-0-9203038": [{ "type": "text", "sub_type": "message", "message": "Yellow", "message_RU": "Желтый" },
-		{ "type": "func", "func": change_colour.bind(null, 'yellow') }],
-	"ae-0-0-9203039": [{ "type": "text", "sub_type": "message", "message": "Blue", "message_RU": "Синий" },
-		{ "type": "func", "func": change_colour.bind(null, 'blue') }],
+	"ae-0-0-9203037": [{ "type": "text", "sub_type": "message", "message": "Red", "message_RU": "Красный" }, { "type": "func", "func": change_colour.bind(null, 'red') }],
+	"ae-0-0-9203038": [{ "type": "text", "sub_type": "message", "message": "Yellow", "message_RU": "Желтый" }, { "type": "func", "func": change_colour.bind(null, 'yellow') }],
+	"ae-0-0-9203039": [{ "type": "text", "sub_type": "message", "message": "Blue", "message_RU": "Синий" }, { "type": "func", "func": change_colour.bind(null, 'blue') }],
 	// anti-clockwise
 	"s-920-3000-1317-0": [{ "type": "func", "func": set_clockwise.bind(null, false) }],
 	// clockwise

@@ -10,10 +10,10 @@ let timer1;
 let printTarget = true;
 let inBait = false;
 
-function skilld_event(skillid, handlers, event, entity, dispatch){
+function skilld_event(skillid, handlers, event, ent, dispatch){
 	if([107, 310].includes(skillid)){ // Bait/Back flip
 		inBait = true;
-		setTimeout(() => inBait = false, 3500);
+		dispatch.setTimeout(() => inBait = false, 3500);
 	}
 	if(skillid == 116){ // Haymaker
 		if(inBait){
@@ -32,10 +32,10 @@ function skilld_event(skillid, handlers, event, entity, dispatch){
 	}
 	if([31031007, 32031007].includes(skillid)){ // "Ha" attacks
 		if(printTarget){
-			clearTimeout(timer1);
+			dispatch.clearTimeout(timer1);
 			printTarget = false;
-			setTimeout(() => printTarget = true, 5000);
-			timer1 = setTimeout(()=> {
+			dispatch.setTimeout(() => printTarget = true, 5000);
+			timer1 = dispatch.setTimeout(()=> {
 				handlers['text']({
 					"sub_type": "alert",
 					"message": "Target attacks soon",
@@ -61,15 +61,11 @@ module.exports = {
 	// "s-3103-1000-127-0": [{"type": "text","class_position":"tank","sub_type": "message","message": "Many kicks","message_RU": "Несколько ударов"}],
 
 	"s-3103-1000-121-0": [{ "type": "text", "sub_type": "message", "message": "Flip kick (Stun)", "message_RU": "Удар в воздухе (стан)" }],
-	"s-3103-1000-107-0": [{ "type": "text", "sub_type": "message", "message": "Bait", "message_RU": "Байт" },
-		{ "type": "func", "func": skilld_event.bind(null, 107) }],
-	"s-3103-1000-110-0": [{ "type": "text", "sub_type": "message", "message": "Spin", "message_RU": "Крутилка" },
-		{ "type": "func", "func": SpawnCircle.bind(null, true, 553, 0, 0, 12, 420, 0, 3000) }],
-	"s-3103-1000-114-0": [{ "type": "text", "sub_type": "message", "message": "Leap (Knockdown)", "message_RU": "Прыжок (опрокид)" },
-		{ "type": "func", "func": SpawnCircle.bind(null, true, 553, 0, 0, 12, 240, 0, 2000) }],
+	"s-3103-1000-107-0": [{ "type": "text", "sub_type": "message", "message": "Bait", "message_RU": "Байт" }, { "type": "func", "func": skilld_event.bind(null, 107) }],
+	"s-3103-1000-110-0": [{ "type": "text", "sub_type": "message", "message": "Spin", "message_RU": "Крутилка" }, { "type": "func", "func": SpawnCircle.bind(null, true, 553, 0, 0, 12, 420, 0, 3000) }],
+	"s-3103-1000-114-0": [{ "type": "text", "sub_type": "message", "message": "Leap (Knockdown)", "message_RU": "Прыжок (опрокид)" }, { "type": "func", "func": SpawnCircle.bind(null, true, 553, 0, 0, 12, 240, 0, 2000) }],
 	// "s-3103-1000-154-0": [{"type": "text","sub_type": "message","message": "Jumping kick","message_RU": "Удар в прыжке"}], // 154 310 116
-	"s-3103-1000-310-0": [{ "type": "text", "sub_type": "message", "message": "Back flip | Haymaker", "message_RU": "Сальто назад | Мощный удар" },
-		{ "type": "func", "func": skilld_event.bind(null, 310) }], // 310 116
+	"s-3103-1000-310-0": [{ "type": "text", "sub_type": "message", "message": "Back flip | Haymaker", "message_RU": "Сальто назад | Мощный удар" }, { "type": "func", "func": skilld_event.bind(null, 310) }], // 310 116
 	"s-3103-1000-116-0": [{ "type": "func", "func": skilld_event.bind(null, 116) }], // Haymaker
 	"s-3103-1000-115-0": [{ "type": "text", "sub_type": "message", "message": "Haymaker (Tank)", "message_RU": "Мощный удар (танк)" }],
 	"s-3103-1000-131-0": [{ "type": "text", "sub_type": "message", "message": "Rhythmic Blows", "message_RU": "Ураганная серия" }], // 131 132 133
@@ -88,7 +84,8 @@ module.exports = {
 	// Donuts
 	"qb-3103-1000-31031008": [{ "type": "text", "sub_type": "message", "message": "Donuts: Out > In > Dodge", "message_RU": "Бублики: От него > К нему > Эвейд" }], // 31031008 303/304 117 155
 	"qb-3103-1000-31031009": [{ "type": "text", "sub_type": "message", "message": "Donuts: In > Out > Dodge", "message_RU": "Бублики: К нему > От него > Эвейд" }], // 31031009 303/304 118 155
-	"s-3103-1000-303-0": [{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 8, 630, 0, 7000) },
+	"s-3103-1000-303-0": [
+		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 8, 630, 0, 7000) },
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 445, 0, 0, 12, 250, 0, 5000) },
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 445, 0, 0, 8, 480, 0, 5000) }],
 	"s-3103-1000-304-0": [
