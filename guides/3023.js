@@ -32,34 +32,34 @@ function skilld_event(skillid, handlers, event, ent, dispatch){
 		}, 110000);
 	}
 
-	if(skillid === 3119 || skillid === 3220){ // In/ Out Mechanic
-		switch(debuff){
-			case 1: // Red Debuff
-				if(skillid === 3119){ // Red Inside
+	if(skillid === 3119 || skillid === 3220){
+		switch(skillid){
+			case 3119: // red inside
+				if(debuff === 1){
 					handlers['text']({
 						"sub_type": "message",
-						"message": "OUT (Red)",
+						"message": "OUT (blue)",
 						"message_RU": "ОТ НЕГО"
 					});
-				} else {
-					handlers['text']({ // Blue Inside
+				} else if(debuff === 2){
+					handlers['text']({
 						"sub_type": "message",
-						"message": "IN (Red)",
+						"message": "IN (red)",
 						"message_RU": "К НЕМУ"
 					});
 				}
 				break;
-			case 2: // Blue Debuff
-				if(skillid === 3119){ // Red Inside
+			case 3220: // blue inside
+				if(debuff === 1){
 					handlers['text']({
 						"sub_type": "message",
-						"message": "Out (Blue)",
+						"message": "IN (blue)",
 						"message_RU": "К НЕМУ"
 					});
-				} else {
-					handlers['text']({ // Blue Inside
+				} else if(debuff === 2){
+					handlers['text']({
 						"sub_type": "message",
-						"message": "In (Blue)",
+						"message": "OUT (red)",
 						"message_RU": "ОТ НЕГО"
 					});
 				}
