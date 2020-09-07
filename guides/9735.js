@@ -30,7 +30,8 @@ module.exports = {
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 0, 0, 240, 380, 0, 2000) },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 0, 0, 120, 380, 0, 2000) }],
 	"s-735-2000-301-0": [{ "type": "text", "sub_type": "message", "message": "Throwing Orb", "message_RU": "Бросающая сфера" }],
-	"s-735-2000-304-0": [{ "type": "text", "sub_type": "message", "message": "Get Out!", "message_RU": "Убирайся!" }],
+	"s-735-2000-304-0": [{ "type": "text", "sub_type": "message", "message": "Get Out!", "message_RU": "Убирайся!" },
+		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 10, 380, 100, 4200) }],
 	"s-735-2007-201-0": [{ "type": "func", "func": SpawnVector.bind(null, 912, 0, 0, 0, 500, 0, 4000) },
 		{ "type": "func", "func": SpawnVector.bind(null, 912, 0, 0, 90, 500, 0, 4000) },
 		{ "type": "func", "func": SpawnVector.bind(null, 912, 0, 0, 180, 500, 0, 4000) },
@@ -101,5 +102,5 @@ module.exports = {
 	"s-735-3000-305-0": [{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 8, 300, 0, 7000) }],
 	"s-735-3000-321-0": [{ "type": "text", "sub_type": "message", "message": "Shield!", "message_RU": "Щит!" },
 		{ "type": "text", "sub_type": "message", "delay": 90000, "message": "Shield in 10 seconds!", "message_RU": "Через 10 сек. щит!" }],
-	"s-735-3000-324-0": [{ "type": "text", "sub_type": "message", "message": "Out! (Dodge)", "message_RU": "Вне! (Уклонение)" }]
+	"s-735-3000-324-0": [{ "type": "text", "sub_type": "message", "message": "Dodge!", "message_RU": "Вне! (Уклонение)" }]
 };
