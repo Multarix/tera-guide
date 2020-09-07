@@ -1,7 +1,10 @@
-# Tera-Guide
+# tera-guide
 A generic guide module for TERA with English and Russian translations (detects automatically). Display hints on screen and drawing zones of bosses attacks and mechanics (also supports of Text-to-speech notifications).
 
 Основной модуль подсказок по данжам TERA с поддержкой русского и английского языков. Вывод подсказок в чат или на экран, а также отрисовка зон атак боссов и механик (присутствует возможность голосовых уведомлений).
+
+&#x1F534; **A critical updates have been released from September 3rd, 2020. Please update!  
+&#x1F534; От 3 сентября 2020 года были выпущены критические обновления. Пожалуйста, обновитесь!**
 
 ## Dependencies / Зависимости
 https://github.com/tera-toolbox-mods/library
@@ -14,6 +17,7 @@ Extract to "mods" directory in your Tera-Proxy. DO NOT INSTALLED IT AS "library-
 Toolbox(/8) | Command description | Описание команды
 --- | --- | ---
 **guide** | Module on/off | Вкл./выкл. модуля
+**guide&nbsp;gui** | Show module GUI| Показать графический интерфейс
 **guide&nbsp;voice**<br>(default: on) | Text-to-speech (TTS) notices on/off, speech rate is set by command **guide `1`~`10`** | Вкл./выкл. голосовых уведомлений (TTS), скорость чтения задается командой **guide `1`~`10`**
 **guide&nbsp;lNotice**<br>(default: off) | Send notices to chat channel "Notice" instead of on-screen messages on/off | Вкл./выкл. отправки уведомлений в канал чата "Важно" вместо показа экранных сообщений
 **guide&nbsp;gNotice**<br>(default: off) | Send notices to party chat channel on/off (will be visible for all party members) | Вкл./выкл. отправки уведомлений в чат группы (уведомления будут видеть все члены группы)
@@ -44,9 +48,7 @@ id | Dungeon name | Название данжа
 3202 | Draakon Arena (Hard) | Командный центр (сложно)
 3027 | Forbidden Arena [Hagufna] | Арена безумия [Бессмертный воин]
 3103 | Forbidden Arena [Undying Warlord] | Арена безумия [Этерния]
-3203 | Forbidden Arena [Nightmare Undying Warlord]&#42; | Арена безумия [Бессмертный]&#42;
-
-&#42; - Dungeon on testing, possibly mistakes / Данж тестируется, возможны ошибки
+3203 | Forbidden Arena [Nightmare Undying Warlord] | Арена безумия [Бессмертный]
 
 ## Notices settings / Настройка уведомлений
 
@@ -75,6 +77,8 @@ id | Dungeon name | Название данжа
 - **[Kasea](https://github.com/tera-toolbox-mods)** - Original developer of Tera-Guide module
 - **[michengs](https://github.com/michengs)** - Author of base code for most guides and module core
 - **[ZC](https://github.com/tera-mod)** - Provided coordinates for rendering attack areas and mechanics
+- **[Kuroine](https://github.com/Kuroine)** - Author of base code for the DA guide
+- **[Multarix](https://github.com/Multarix)** - Author of the RR guide and also making changes to the English translation
 - **[Owyn](https://github.com/Owyn)** - Developer of great guides for RK-9, AA and GV, whose code was used
 - **[ITunk](https://github.com/GrafNikola)** - Author of initial Russian translation
-- **[HSDN](https://github.com/HSDN) - The dude who I forked this from, and constantly steal his updates from... but he also steals some of mine so it's all good
+- **[HSDN](https://github.com/HSDN)** - The dude who I forked this from, and steal updates from, but they also steal mine, so we good :D
