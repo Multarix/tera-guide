@@ -1,4 +1,5 @@
 "use strict";
+
 const DefaultSettings = {
 	"enabled": true,
 	"lNotice": false,
@@ -62,17 +63,17 @@ module.exports = function MigrateSettings(from_ver, to_ver, settings){
 		// upgrade from any version to the latest version without additional effort!
 		switch(to_ver){
 			default:
-				let oldsettings = settings; // eslint-disable-line
+				const oldsettings = settings; //eslint-disable-line
 				settings = Object.assign(DefaultSettings, {});
 				for(const option in settings){
 					if(option == "dungeons"){
 						const optionobj = [];
-						for(const i of settings[option]){
+						for(let i of settings[option]){
 							if(i.id == undefined) continue;
 							if(oldsettings[option]){
 								for(const oldi of oldsettings[option]){
 									if(oldi.id == i.id){
-										i = oldi; // eslint-disable-line
+										i = oldi;
 										break;
 									}
 								}
