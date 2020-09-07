@@ -100,5 +100,5 @@ module.exports = {
 	"s-735-3000-129-0": [{ "type": "text", "class_position": "tank", "sub_type": "message", "message": "Dodge", "message_RU": "Эвейд" }],
 	"s-735-3000-305-0": [{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 8, 300, 0, 7000) }],
 	"s-735-3000-321-0": [{ "type": "text", "sub_type": "message", "message": "Shield!", "message_RU": "Щит!" }],
-	"s-735-3000-324-0": [{ "type": "text", "sub_type": "message", "message": "Get Out (Dodge)", "message_RU": "Эвейд" }]
+	"s-735-3000-324-0": [{ "type": "text", "sub_type": "message", "message": "Dodge!", "message_RU": "Эвейд" }]
 };
