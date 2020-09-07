@@ -15,6 +15,7 @@ const HEALER_CLASS_IDS = [6, 7];
 // Warrior Defence stance abnormality ids
 const WARRIOR_TANK_IDS = [100200, 100201];
 // Zones is available in game for GUI or menus
+/* eslint-disable */
 const AVAILABLE_ZONE_IDS = [
 	3020, // Sea of Honor
 	3023, // Akalath Quarantine
@@ -33,7 +34,7 @@ const AVAILABLE_ZONE_IDS = [
 	9781, // Velik's Sanctuary
 	9920, // Antaroth's Abyss (Hard)
 	9982 // Grotto of Lost Souls (Hard)
-];
+]; // eslint-disable-line
 // Zones with skillid range 1000-3000
 const SP_ZONE_IDS = [
 	3026, // Corrupted Skynest
@@ -57,6 +58,7 @@ const ES_ZONE_IDS = [
 	9000, // ???
 	9759 // Forsaken Island (Hard)
 ];
+/* eslint-enable */
 // Supported languages by client
 const languages = { 0: "en", 1: "kr", 3: "jp", 4: "de", 5: "fr", 7: "tw", 8: "ru" };
 // Messages colors

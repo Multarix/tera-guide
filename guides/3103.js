@@ -70,8 +70,7 @@ module.exports = {
 	"s-3103-1000-115-0": [{ "type": "text", "sub_type": "message", "message": "Haymaker (Tank)", "message_RU": "Мощный удар (танк)" }],
 	"s-3103-1000-131-0": [{ "type": "text", "sub_type": "message", "message": "Rhythmic Blows", "message_RU": "Ураганная серия" }], // 131 132 133
 	// 116 146
-	"s-3103-1000-146-0": [
-		{ "type": "text", "sub_type": "message", "message": "Back Kick", "message_RU": "Откид назад" },
+	"s-3103-1000-146-0": [{ "type": "text", "sub_type": "message", "message": "Back Kick", "message_RU": "Откид назад" },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 90, 120, 170, 600, 0, 3000) },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 270, 120, -170, 600, 0, 3000) }],
 
@@ -79,8 +78,7 @@ module.exports = {
 	"qb-3103-1000-31031006": [{ "type": "text", "sub_type": "message", "message": "Shield!", "message_RU": "Щит!" }],
 
 	// Target "Ha" attacks 308 31031007 125
-	"qb-3103-1000-31031007": [
-		{ "type": "text", "sub_type": "message", "message": "Target", "message_RU": "Таргет" },
+	"qb-3103-1000-31031007": [{ "type": "text", "sub_type": "message", "message": "Target", "message_RU": "Таргет" },
 		{ "type": "func", "func": skilld_event.bind(null, 31031007) }],
 	"s-3103-1000-124-0": [{ "type": "text", "sub_type": "message", "message": "Kick", "message_RU": "Удар" }], // 305 124
 	"s-3103-1000-125-0": [{ "type": "text", "sub_type": "message", "message": "Kick", "message_RU": "Удар" }],
@@ -88,12 +86,10 @@ module.exports = {
 	// Donuts
 	"qb-3103-1000-31031008": [{ "type": "text", "sub_type": "message", "message": "Donuts: Out > In > Dodge", "message_RU": "Бублики: От него > К нему > Эвейд" }], // 31031008 303/304 117 155
 	"qb-3103-1000-31031009": [{ "type": "text", "sub_type": "message", "message": "Donuts: In > Out > Dodge", "message_RU": "Бублики: К нему > От него > Эвейд" }], // 31031009 303/304 118 155
-	"s-3103-1000-303-0": [
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 8, 630, 0, 7000) },
+	"s-3103-1000-303-0": [{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 8, 630, 0, 7000) },
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 445, 0, 0, 12, 250, 0, 5000) },
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 445, 0, 0, 8, 480, 0, 5000) }],
-	"s-3103-1000-304-0": [
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 8, 630, 0, 7000) },
+	"s-3103-1000-304-0": [{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 8, 630, 0, 7000) },
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 445, 0, 0, 12, 250, 0, 5000) },
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 445, 0, 0, 8, 480, 0, 5000) }],
 	"s-3103-1000-155-0": [{ "type": "text", "sub_type": "message", "delay": 400, "message": "Dodge", "message_RU": "Эвейд" }],
@@ -101,8 +97,7 @@ module.exports = {
 	// Stun 142 148 129
 	"s-3103-1000-142-0": [{ "type": "text", "sub_type": "message", "message": "Stun | Back Wave", "message_RU": "Стан | Волна назад" }],
 	"s-3103-1000-148-0": [{ "type": "func", "func": SpawnCircle.bind(null, true, 912, 0, 0, 12, 300, 0, 3000) }],
-	"s-3103-1000-129-0": [
-		{ "type": "text", "sub_type": "message", "message": "Back Wave", "message_RU": "Волна назад (откид)" },
+	"s-3103-1000-129-0": [{ "type": "text", "sub_type": "message", "message": "Back Wave", "message_RU": "Волна назад (откид)" },
 		{ "type": "func", "func": SpawnVector.bind(null, 912, 90, 210, 390, 300, 0, 2000) },
 		{ "type": "func", "func": SpawnVector.bind(null, 912, 90, 140, 380, 350, 0, 2000) },
 		{ "type": "func", "func": SpawnVector.bind(null, 912, 90, 70, 370, 400, 0, 2000) },
@@ -117,8 +112,7 @@ module.exports = {
 
 	// AoE 313 314
 	"s-3103-1000-313-0": [{ "type": "text", "sub_type": "message", "message": "AOE", "message_RU": "AOE" }],
-	"s-3103-1000-314-0": [
-		{ "type": "text", "sub_type": "message", "message": "Get Out", "message_RU": "Выйти" },
+	"s-3103-1000-314-0": [{ "type": "text", "sub_type": "message", "message": "Get Out", "message_RU": "Выйти" },
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 20, 460, 0, 4000) }],
 
 	// Debuff

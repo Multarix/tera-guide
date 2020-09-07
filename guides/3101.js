@@ -30,8 +30,7 @@ module.exports = {
 	"s-3101-1000-148-0": [{ "type": "text", "sub_type": "message", "message": "Right Hand (Flying)", "message_RU": "Правая рука (подлет)" }],
 	"s-3101-1000-149-0": [{ "type": "text", "sub_type": "message", "message": "Left Hand (Flying)", "message_RU": "Левая рука (подлет)" }],
 	"s-3101-1000-305-0": [{ "type": "text", "sub_type": "message", "message": "Pizza", "message_RU": "Pizza" }],
-	"s-3101-1000-313-0": [
-		{ "type": "text", "sub_type": "message", "message": "Circles (Slow)", "message_RU": "Кольцо" },
+	"s-3101-1000-313-0": [{ "type": "text", "sub_type": "message", "message": "Circles (Slow)", "message_RU": "Кольцо" },
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 75, 10, 300, 0, 6000) }],
 
 
@@ -60,11 +59,9 @@ module.exports = {
 	"s-3101-2000-228-0": [{ "type": "text", "sub_type": "message", "message": "Team Up", "message_RU": "Камни (вместе)!!!" }],
 	"s-3101-2000-230-0": [{ "type": "text", "sub_type": "message", "message": "AOE", "message_RU": "AOE" }],
 
-	"s-3101-2000-231-0": [
-		{ "type": "text", "sub_type": "message", "message": "Out Safe", "message_RU": "От него" },
+	"s-3101-2000-231-0": [{ "type": "text", "sub_type": "message", "message": "Out Safe", "message_RU": "От него" },
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 10, 300, 0, 3000) }],
-	"s-3101-2000-232-0": [
-		{ "type": "text", "sub_type": "message", "message": "In Safe", "message_RU": "К нему" },
+	"s-3101-2000-232-0": [{ "type": "text", "sub_type": "message", "message": "In Safe", "message_RU": "К нему" },
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 10, 300, 0, 3000) },
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 3, 875, 0, 3000) }],
 

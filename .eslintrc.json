@@ -29,6 +29,7 @@
 		"no-unused-vars": "off",
 		"no-var": "error",
 		"object-curly-spacing": ["error", "always"],
+		"array-bracket-spacing": ["error", "never"],
 		"prefer-const": "error",
 		"semi": ["error", "always"],
 		"space-in-parens": "error",

@@ -269,8 +269,7 @@ const skills = {
 
 	// AOE лед (большой)
 	"104-0": [{ "type": "text", "sub_type": "message", "message": "Ice Storm DOTs", "message_RU": "Ледяные лужи" },
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 8, 500, 0, 5000) }
-	],
+		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 8, 500, 0, 5000) }],
 	// AOE огонь (большой)
 	"105-0": [{ "type": "text", "sub_type": "message", "message": "Fire Bombs", "message_RU": "Огненные бомбы" },
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 135, 500, 10, 270, 0, 3000) },
@@ -280,11 +279,9 @@ const skills = {
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 90, 500, 10, 270, 0, 4000) },
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 270, 500, 10, 270, 0, 4250) },
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 500, 10, 270, 0, 4500) },
-		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 180, 500, 10, 270, 0, 4750) }
-	],
+		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 180, 500, 10, 270, 0, 4750) }],
 	// AOE лед (малый)
-	"154-0": [
-		{ "type": "text", "sub_type": "message", "message": "Ice Storm", "message_RU": "Ледяной шторм" },
+	"154-0": [{ "type": "text", "sub_type": "message", "message": "Ice Storm", "message_RU": "Ледяной шторм" },
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 8, 500, 0, 6000) }],
 	// AOE огонь (малый)
 	"155-0": [{ "type": "text", "sub_type": "message", "message": "Fire (Knockdown)", "message_RU": "Огненный столб (опрокид)" },
