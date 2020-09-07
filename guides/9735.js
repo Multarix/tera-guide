@@ -1,7 +1,6 @@
 ﻿// RK-9 Kennel
 //
 // made by michengs
-// updated by Multarix
 
 const { SpawnPoint, SpawnVector, SpawnCircle } = require("../lib");
 
@@ -13,13 +12,13 @@ module.exports = {
 	},
 
 	// 1 BOSS
-	"s-735-1000-111-0": [{ "type": "text", "sub_type": "message", "message": "Front & Back", "message_RU": "Удар назад + вперед" }],
-	"s-735-1000-112-0": [{ "type": "text", "sub_type": "message", "message": "Back attack", "message_RU": "Удар назад" }],
-	"s-735-1000-304-0": [{ "type": "text", "sub_type": "message", "message": "Out", "message_RU": "ОТ НЕГО" }],
-	"s-735-1000-305-0": [{ "type": "text", "sub_type": "message", "message": "IN", "message_RU": "К НЕМУ" }],
+	"s-735-1000-111-0": [{ "type": "text", "sub_type": "message", "message": "Back + Front", "message_RU": "Удар назад + вперед" }],
+	"s-735-1000-112-0": [{ "type": "text", "sub_type": "message", "message": "Back", "message_RU": "Удар назад" }],
+	"s-735-1000-304-0": [{ "type": "text", "sub_type": "message", "message": "Out", "message_RU": "От него" }],
+	"s-735-1000-305-0": [{ "type": "text", "sub_type": "message", "message": "In", "message_RU": "К нему" }],
 	"s-735-1000-306-0": [{ "type": "text", "sub_type": "message", "message": "Bombs", "message_RU": "Бомбы" }],
-	"s-735-1000-307-0": [{ "type": "text", "sub_type": "message", "message": "Pull (dodge)", "message_RU": "Тянуть (уклоняться)" }],
-	"s-735-1000-309-0": [{ "type": "text", "sub_type": "message", "message": "Four Missiles", "message_RU": "Четыре ракеты" }],
+	"s-735-1000-307-0": [{ "type": "text", "sub_type": "message", "message": "Pull", "message_RU": "Стяжка" }],
+	"s-735-1000-309-0": [{ "type": "text", "sub_type": "message", "message": "Four Missile", "message_RU": "Запуск 4 ракет" }],
 
 	// 2 BOSS
 	"s-735-2000-102-0": [{ "type": "text", "class_position":"tank", "sub_type": "message", "message": "Pizza Cutter (Dodge)", "message_RU": "Резак для пиццы (уклоняться)" },
@@ -98,9 +97,8 @@ module.exports = {
 		{ "type": "func", "func": SpawnPoint.bind(null, 553, 330, 220, 0, 3000) },
 		{ "type": "func", "func": SpawnPoint.bind(null, 553, 340, 210, 0, 3000) },
 		{ "type": "func", "func": SpawnVector.bind(null, 553, 350, 210, 0, 290, 0, 3000) }],
-	"s-735-3000-129-0": [{ "type": "text", "class_position":"tank", "sub_type": "message", "message": "Dodge", "message_RU": "Увернуться!" }],
+	"s-735-3000-129-0": [{ "type": "text", "class_position": "tank", "sub_type": "message", "message": "Dodge", "message_RU": "Эвейд" }],
 	"s-735-3000-305-0": [{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 8, 300, 0, 7000) }],
-	"s-735-3000-321-0": [{ "type": "text", "sub_type": "message", "message": "Shield!", "message_RU": "Щит!" },
-		{ "type": "text", "sub_type": "message", "delay": 90000, "message": "Shield in 10 seconds!", "message_RU": "Через 10 сек. щит!" }],
-	"s-735-3000-324-0": [{ "type": "text", "sub_type": "message", "message": "Dodge!", "message_RU": "Вне! (Уклонение)" }]
+	"s-735-3000-321-0": [{ "type": "text", "sub_type": "message", "message": "Shield!", "message_RU": "Щит!" }],
+	"s-735-3000-324-0": [{ "type": "text", "sub_type": "message", "message": "Get Out (Dodge)", "message_RU": "Эвейд" }]
 };

@@ -5,6 +5,7 @@
 const { SpawnPoint, SpawnVector, SpawnCircle } = require("../lib");
 
 let player, entity, library, effect;
+
 module.exports = {
 	load(dispatch){
 		({ player, entity, library, effect } = dispatch.require.library);
@@ -34,18 +35,18 @@ module.exports = {
 	"s-739-2000-303-0": [{ "type": "text", "sub_type": "message", "message": "Whip", "message_RU": "Кнут" }],
 
 	// Argog (3rd boss)
-	"h-739-3001-30": [{ "type": "text", "sub_type": "message", "message": "Reveal Soon", "message_RU": "Скоро появится" }],
+	"h-739-3001-30": [{ "type": "text", "sub_type": "message", "message": "Reveal Soon...", "message_RU": "Скоро появится" }],
 	"s-739-3000-201-0": [{ "type": "text", "sub_type": "message", "message": 'Blue Shield', "message_RU": "Синий щит", "class_position": "lancer" },
 		{ "type": "text", "sub_type": "message", "delay": 3650, "message": 'Dodge!', "message_RU": "Уклоняйся" }],
 	"s-739-3000-107-0": [{ "type": "text", "sub_type": "message", "message": "Many Hits", "message_RU": "Много хитов" }],
 	"s-739-3000-115-0": [{ "type": "text", "sub_type": "message", "message": 'Incoming Stun', "message_RU": "Входящее оглушение" },
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 10, 630, 0, 4000) },
 		{ "type": "text", "sub_type": "message", "delay": 2000, "message": 'Dodge!', "message_RU": "Уклоняйся" }],
-	"s-739-3000-118-0": [{ "type": "text", "sub_type": "message", "message": "Spin", "message_RU": "Вращение" }],
+	"s-739-3000-118-0": [{ "type": "text", "sub_type": "message", "message": "Scratching", "message_RU": "Вращение" }],
 	// Revealed Argog
 	"s-739-3000-167-0": [{ "type": "text", "sub_type": "message", "message": "Many Hits", "message_RU": "Много хитов" }],
 	"s-739-3000-175-0": [{ "type": "text", "sub_type": "message", "message": 'Incoming Stun', "message_RU": "Входящее оглушение" },
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 10, 630, 0, 4000) },
 		{ "type": "text", "sub_type": "message", "delay": 2000, "message": 'Dodge!', "message_RU": "Уклоняйся" }],
-	"s-739-3000-178-0": [{ "type": "text", "sub_type": "message", "message": "Spin", "message_RU": "Вращение" }]
+	"s-739-3000-178-0": [{ "type": "text", "sub_type": "message", "message": "Scratching (bleed)", "message_RU": "Вращение" }]
 };
