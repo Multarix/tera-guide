@@ -17,11 +17,11 @@ module.exports = {
 	"s-735-1000-304-0": [{ "type": "text", "sub_type": "message", "message": "Out", "message_RU": "От него" }],
 	"s-735-1000-305-0": [{ "type": "text", "sub_type": "message", "message": "In", "message_RU": "К нему" }],
 	"s-735-1000-306-0": [{ "type": "text", "sub_type": "message", "message": "Bombs", "message_RU": "Бомбы" }],
-	"s-735-1000-307-0": [{ "type": "text", "sub_type": "message", "message": "Pull", "message_RU": "Стяжка" }],
+	"s-735-1000-307-0": [{ "type": "text", "sub_type": "message", "message": "Pull (dodge)", "message_RU": "Стяжка" }],
 	"s-735-1000-309-0": [{ "type": "text", "sub_type": "message", "message": "Four Missile", "message_RU": "Запуск 4 ракет" }],
 
 	// 2 BOSS
-	"s-735-2000-102-0": [{ "type": "text", "class_position":"tank", "sub_type": "message", "message": "Pizza Cutter (Dodge)", "message_RU": "Резак для пиццы (уклоняться)" },
+	"s-735-2000-102-0": [{ "type": "text", "class_position":"tank", "sub_type": "message", "message": "Pizza Cutter (dodge)", "message_RU": "Резак для пиццы (уклоняться)" },
 		{ "type": "func", "func": SpawnCircle.bind(null, true, 553, 0, 300, 12, 230, 0, 3000) }],
 	"s-735-2000-105-0": [{ "type": "text", "sub_type": "message", "message": "360", "message_RU": "360" },
 		{ "type": "func", "func": SpawnCircle.bind(null, false, 553, 0, 0, 10, 280, 100, 4000) }],
