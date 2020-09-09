@@ -6,7 +6,7 @@
         "guiName": "TERA Guide",
         "settingsFile": "config.json",
         "settingsMigrator": "settings_migrator.js",
-        "settingsVersion": "1.07"
+        "settingsVersion": "1.11"
     },
     "author": "HSDN (forked by Multarix)",
     "description": "Display attack notifications and attack zones of boss monsters",
